@@ -15,6 +15,17 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 
+POWERLEVEL9K_COLOR_SCHEME='dark'
+POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='0'
+POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='10'
+POWERLEVEL9K_STATUS_OK_BACKGROUND='8'
+POWERLEVEL9K_VCS_CLEAN_BACKGROUND='11'
+POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='8'
+POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='10'
+POWERLEVEL9K_VCS_MAX_SYNC_LATENCY_SECONDS='0.05'
+POWERLEVEL9K_VI_INSERT_MODE_STRING='INSERT'
+POWERLEVEL9K_VI_COMMAND_MODE_STRING='NORMAL'﻿
+
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -92,3 +103,5 @@ bindkey "\e[H" beginning-of-line
 bindkey "\e[F" end-of-line
 # completion in the middle of a line
 bindkey '^i' expand-or-complete-prefix
+
+tput smkx

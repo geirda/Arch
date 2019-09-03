@@ -18,6 +18,9 @@ SAVEHIST=1000
 POWERLEVEL9K_COLOR_SCHEME='dark'
 POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='0'
 POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='10'
+POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='12'
+POWERLEVEL9K_DIR_HOME_BACKGROUND='12'
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='12'
 POWERLEVEL9K_STATUS_OK_BACKGROUND='8'
 POWERLEVEL9K_VCS_CLEAN_BACKGROUND='11'
 POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='8'
@@ -65,9 +68,9 @@ function zsrc() {
 
 # aliases
 alias l='ls'
-alias la='ls -A'
-alias ll='ls -lp'
-alias ls='ls --color=auto -F --group-directories-first'
+alias la='ls -a'
+alias ll='ls -l'
+alias ls='exa --group-directories-first'
 alias 'rm=rm -i'
 alias 'mv=mv -i'
 alias 'cp=cp -i'
@@ -105,3 +108,5 @@ bindkey "\e[F" end-of-line
 bindkey '^i' expand-or-complete-prefix
 
 tput smkx
+
+fortune

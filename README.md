@@ -1,2 +1,2 @@
 # Arch
-config files for Arch
+dotfiles for Arch

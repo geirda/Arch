@@ -41,8 +41,6 @@ linux*)
 	;;
 esac
 
-#PS1=$'\e[1;32m%n@%m \e[1;34m%1~\e[00m> '
-
 # colors in less (default PAGER in Arch)
 export LESS_TERMCAP_mb=$'\E[01;31m'
 export LESS_TERMCAP_md=$'\E[01;31m'
@@ -106,7 +104,8 @@ bindkey "\e[H" beginning-of-line
 bindkey "\e[F" end-of-line
 # completion in the middle of a line
 bindkey '^i' expand-or-complete-prefix
-
+# make delete key work in st:
 tput smkx
 
+# display fortune cookie
 fortune

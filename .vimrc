@@ -18,28 +18,7 @@ endif
 " Get the defaults that most users want.
 source $VIMRUNTIME/defaults.vim
 
-map <C-v> "*P
-vnoremap <C-c> "*y :let @+=@*<CR>
-
-set number
-set laststatus=2
-set t_Co=256
-
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
-let g:airline_theme='angr'
-
-hi LineNr ctermfg=242
-hi CursorLineNr ctermfg=15
-hi VertSplit ctermfg=8 ctermbg=0
-hi Statement ctermfg=3
-
-set mouse=nicr
 set nobackup
-
-let g:minimap_highlight='Visual'
-
-let g:python_highlight_all = 1
 
 if &t_Co > 2 || has("gui_running")
   " Switch on highlighting the last used search pattern.
@@ -63,3 +42,27 @@ augroup END
 if has('syntax') && has('eval')
   packadd! matchit
 endif
+
+" Copy and paste
+map <C-v> "*P
+vnoremap <C-c> "*y :let @+=@*<CR>
+
+set number
+set laststatus=2
+set t_Co=256
+
+if &term =~ '256color'
+	" disable Background Color Erase (BCE) so that color schemes
+	" render properly when inside 256-color tmux and GNU screen.
+	set t_ut=
+endif
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme='angr'
+
+hi LineNr ctermfg=242
+hi CursorLineNr ctermfg=15
+hi VertSplit ctermfg=8 ctermbg=0
+hi Statement ctermfg=3
+

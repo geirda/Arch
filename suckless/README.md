@@ -8,4 +8,4 @@ Slightly patched and modified.
 * ST: modified colors, uses Hack Font (regular).
 	Patches: alpha, scrollback, scrollback-mouse, scrollback-mouse-altscreen
 
-![Screenshot](https://github.com/geirda/Arch/screenshots/dwm-st.png)
+![Screenshot](https://github.com/geirda/Arch/tree/master/screenshots/dwm-st.png)

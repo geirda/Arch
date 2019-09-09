@@ -15,6 +15,21 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 
+# Make sure the terminal is in application mode, when zle is
+# active. Only then are the values from $terminfo valid.
+if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
+    function zle-line-init () {
+        emulate -L zsh
+        printf '%s' ${terminfo[smkx]}
+    }
+    function zle-line-finish () {
+        emulate -L zsh
+        printf '%s' ${terminfo[rmkx]}
+    }
+    zle -N zle-line-init
+    zle -N zle-line-finish
+fi
+
 POWERLEVEL9K_COLOR_SCHEME='dark'
 POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='031'
 POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='15'
@@ -107,8 +122,6 @@ bindkey "\e[H" beginning-of-line
 bindkey "\e[F" end-of-line
 # completion in the middle of a line
 bindkey '^i' expand-or-complete-prefix
-# make delete key work in st:
-tput smkx
 
 # display fortune cookie
 fortune

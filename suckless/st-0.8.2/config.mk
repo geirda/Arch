@@ -7,8 +7,8 @@ VERSION = 0.8.2
 PREFIX = /usr
 MANPREFIX = $(PREFIX)/share/man
 
-X11INC = /usr/include/X11
-X11LIB = /usr/lib/X11
+X11INC = /usr/include
+X11LIB = /usr/lib
 
 PKG_CONFIG = pkg-config
 

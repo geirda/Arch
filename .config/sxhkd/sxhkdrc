@@ -15,7 +15,7 @@ super + b
  bspc desktop -B
 
 super + {_,shift + }z
- $HOME/bin/gap{inc,dec}.sh
+ $HOME/.config/sxhkd/gap{inc,dec}.sh
 
 # set the window state
 super + {_,shift + }t

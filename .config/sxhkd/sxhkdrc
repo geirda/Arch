@@ -81,7 +81,7 @@ super + {_,shift + }{1-9,0}
 #
 
 super + Return
- st -e fish
+ st
 
 super + p
  dmenu_run -fn "Hack:size=10" -nb "#1c2023" -nf "#a7a7a7" -sb "#5f819d"

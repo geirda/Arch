@@ -1,5 +1,6 @@
 #!/bin/sh
- while true;
+
+while true;
 do
 	RAM="$(free -m | awk '/Mem/{ print $3 }')MB"
 	DISKUSE="$(df -h | awk '/sda1/{ print $4 }')B"

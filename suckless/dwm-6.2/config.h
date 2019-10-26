@@ -10,26 +10,26 @@ static const int horizpadbar        = 2;        /* horizontal padding for status
 static const int vertpadbar         = 2;        /* vertical padding for statusbar */
 static const char *fonts[]          = { "RobotoMono Nerd Font:size=10" };
 static const char dmenufont[]       = "Hack:size=10";
-static const char col_gray1[]       = "#0a0a0a";
+static const char col_gray1[]       = "#101424";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#666666";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_gray5[]       = "#888888";
-static const char col_gray6[]	    = "#5f819d";
-static const char col_gray7[]	    = "#aaaaaa";
-static const char col_gray8[]	    = "#18222e";
+static const char col_gray6[]	    = "#404354";
+static const char col_gray7[]	    = "#c5c5c5";
+static const char col_gray8[]	    = "#282c3c";
 static const char col_cyan[]        = "#2f516d";
 static const char col_cyan2[]       = "#afd1ed";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray5, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_cyan2, col_gray6, col_cyan  },
-        [SchemeTitle]  = { col_gray7, col_gray8,  col_gray2 },
-	[SchemeStatus] = { col_gray7, col_gray6, col_gray2 },
+	[SchemeSel]  = { col_gray7, col_gray6, col_cyan  },
+        [SchemeTitle]  = { col_gray7, col_gray1,  col_gray2 },
+	[SchemeStatus] = { col_gray7, col_gray1, col_gray2 },
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
+static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
 static const char *tagsalt[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
@@ -41,7 +41,7 @@ static const Rule rules[] = {
 	{ "Gimp",     NULL,       NULL,       1 << 4,       1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 1,       1,           -1 },
 	{ "Chromium-browser", NULL, NULL,     1 << 2,       1,		 -1 },
-        { "libreoffice",      NULL, NULL,     1 << 3,       1,           -1 },
+        { "Guake",    NULL,	  NULL,       0 << 0,       1,           -1 },
 };
 
 /* layout(s) */

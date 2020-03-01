@@ -61,8 +61,13 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='angr'
 
+colo ron
+" set background=dark
+syntax on
+
 hi LineNr ctermfg=242
-hi CursorLineNr ctermfg=15
-hi VertSplit ctermfg=8 ctermbg=0
-hi Statement ctermfg=3
+hi CursorLineNr ctermfg=15 ctermbg=30
+" hi Normal ctermbg=0
+" hi VertSplit ctermfg=8 ctermbg=0
+" hi Statement ctermfg=3
 

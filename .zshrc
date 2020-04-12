@@ -4,6 +4,8 @@
 [[ $- != *i* ]] && return
 
 # shell opts
+zstyle ':completion:*' menu select
+
 setopt autocd
 setopt completealiases
 setopt histignorealldups
@@ -11,9 +13,12 @@ setopt histfindnodups
 setopt incappendhistory
 setopt sharehistory
 setopt appendhistory
-HISTFILE=~/.histfile
+HISTFILE=~/.local/share/zsh/history
 HISTSIZE=1000
 SAVEHIST=1000
+
+autoload -Uz compinit
+compinit
 
 # Make sure the terminal is in application mode, when zle is
 # active. Only then are the values from $terminfo valid.
@@ -30,39 +35,41 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
     zle -N zle-line-finish
 fi
 
-POWERLEVEL9K_COLOR_SCHEME='dark'
-POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='239'
-POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='187'
-POWERLEVEL9K_CONTEXT_REMOTE_BACKGROUND='024'
-POWERLEVEL9K_CONTEXT_REMOTE_FOREGROUND='255'
-POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='246'
-POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='000'
-POWERLEVEL9K_DIR_HOME_BACKGROUND='246'
-POWERLEVEL9K_DIR_HOME_FOREGROUND='000'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='246'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='000'
-POWERLEVEL9K_STATUS_OK_BACKGROUND='008'
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
-POWERLEVEL9K_SHORTEN_DELIMITER=""
-POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
-POWERLEVEL9K_VCS_CLEAN_BACKGROUND='011'
-POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='008'
-POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='010'
-POWERLEVEL9K_VCS_MAX_SYNC_LATENCY_SECONDS='0.05'
-POWERLEVEL9K_VI_INSERT_MODE_STRING='INSERT'
-POWERLEVEL9K_VI_COMMAND_MODE_STRING='NORMAL'﻿
+SPACESHIP_PROMPT_ADD_NEWLINE=false
+SPACESHIP_PROMPT_SEPARATE_LINE=false
+SPACESHIP_CHAR_SYMBOL=❯
+SPACESHIP_CHAR_SUFFIX=" "
+SPACESHIP_HG_SHOW=false
+SPACESHIP_PACKAGE_SHOW=false
+SPACESHIP_NODE_SHOW=false
+SPACESHIP_RUBY_SHOW=false
+SPACESHIP_ELM_SHOW=false
+SPACESHIP_ELIXIR_SHOW=false
+SPACESHIP_XCODE_SHOW_LOCAL=false
+SPACESHIP_SWIFT_SHOW_LOCAL=false
+SPACESHIP_GOLANG_SHOW=false
+SPACESHIP_PHP_SHOW=false
+SPACESHIP_RUST_SHOW=false
+SPACESHIP_JULIA_SHOW=false
+SPACESHIP_DOCKER_SHOW=false
+SPACESHIP_DOCKER_CONTEXT_SHOW=false
+SPACESHIP_AWS_SHOW=false
+SPACESHIP_CONDA_SHOW=false
+SPACESHIP_VENV_SHOW=false
+SPACESHIP_PYENV_SHOW=false
+SPACESHIP_DOTNET_SHOW=false
+SPACESHIP_EMBER_SHOW=false
+SPACESHIP_KUBECONTEXT_SHOW=false
+SPACESHIP_TERRAFORM_SHOW=false
+SPACESHIP_TERRAFORM_SHOW=false
+SPACESHIP_VI_MODE_SHOW=false
+SPACESHIP_JOBS_SHOW=false
+
+autoload -U promptinit; promptinit
+prompt spaceship
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-case "$TERM" in
-linux*)
-	PS1='%B%F{green}%n@%m %B%F{blue}%~%F{reset}%b> '
-	;;
-*)
-	source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-	;;
-esac
 
 # colors in less (default PAGER in Arch)
 export LESS_TERMCAP_mb=$'\E[01;31m'
@@ -92,9 +99,10 @@ alias l='ls'
 alias la='ls -a'
 alias ll='ls -l'
 alias ls='exa --group-directories-first'
-alias 'rm=rm -i'
-alias 'mv=mv -i'
-alias 'cp=cp -i'
+alias ..='cd ..'
+alias rm='rm -i'
+alias mv='mv -i'
+alias cp='cp -i'
 alias upd='sudo pacman -Syyu'
 alias pac='sudo pacman --color auto'
 alias merge='xrdb -merge ~/.Xresources'
@@ -129,5 +137,11 @@ bindkey "\e[F" end-of-line
 bindkey '^i' expand-or-complete-prefix
 
 # display fortune cookie
-ufetch
+pfetch
 fortune
+
+case "$TERM" in
+xterm*)
+	cd ~/
+	;;
+esac

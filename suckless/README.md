@@ -11,4 +11,4 @@ Slightly patched and modified.
 * dmenu:
 	Patches: lineheight
 
-![suckless](https://raw.githubusercontent.com/geirda/Arch/master/suckless/dwm-st.png)
+![suckless](https://raw.githubusercontent.com/geirda/Arch/master/suckless/suckless.png)

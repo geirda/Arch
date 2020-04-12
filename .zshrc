@@ -13,7 +13,7 @@ setopt histfindnodups
 setopt incappendhistory
 setopt sharehistory
 setopt appendhistory
-HISTFILE=~/.local/share/zsh/history
+HISTFILE=~/.cache/zsh-history
 HISTSIZE=1000
 SAVEHIST=1000
 

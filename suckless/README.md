@@ -8,4 +8,7 @@ Slightly patched and modified.
 * st: modified colors, Hack Font (regular).
 	Patches: alpha, scrollback, scrollback-mouse, scrollback-mouse-altscreen
 
+* dmenu:
+	Patches: lineheight
+
 ![suckless](https://raw.githubusercontent.com/geirda/Arch/master/suckless/dwm-st.png)

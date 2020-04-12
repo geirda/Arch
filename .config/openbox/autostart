@@ -1,0 +1,9 @@
+# required for xfce settings to work
+xfsettingsd &
+
+# start the panel
+#tint2 &
+polybar openbox-bar
+
+# load wallpaper
+nitrogen --restore &

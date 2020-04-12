@@ -82,10 +82,10 @@ super + Return
  st
 
 super + p
- dmenu_run -fn "Hack:size=10" -nb "#1c2023" -nf "#a7a7a7" -sb "#5f819d"
+ dmenu_run -fn "Hack:size=10" -nb "#1c2023" -nf "#a7a7a7" -sb "#5f819d" -p "dmenu:"
 
 super + space
- dmenu_run -fn "Hack:size=10" -nb "#1c2023" -nf "#a7a7a7" -sb "#5f819d"
+ pcmanfm
 
 super + x
  rofi -show combi

@@ -1,4 +1,4 @@
-set -gx PATH $HOME/bin $PATH
+set -gx PATH $HOME/.local/bin $PATH
 set -gx VISUAL vim
 set SHELL /usr/bin/fish
 #alias ls "ls -F --color --group-directories-first"

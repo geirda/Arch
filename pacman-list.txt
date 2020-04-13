@@ -54,6 +54,7 @@ nano
 nano-syntax-highlighting
 neofetch
 neomutt
+nerd-fonts-jetbrains-mono
 netkit-bsd-finger
 networkmanager
 newsboat
@@ -154,4 +155,5 @@ xorg-xwud
 yay
 zsh
 zsh-autosuggestions
+zsh-completions
 zsh-syntax-highlighting

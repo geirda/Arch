@@ -38,3 +38,4 @@ bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
 polybar -c $HOME/.config/polybar/bspwm-config top &
+tilda -h -g $HOME/.config/tilda/config_0 &

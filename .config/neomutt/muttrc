@@ -18,7 +18,7 @@ set realname = "Not My Real Name"
 
 mailboxes =INBOX =Sent =Trash =Drafts =Junk
 
-source ~/.config/mutt/color.muttrc
+source ~/.config/neomutt/color.muttrc
 
 set sidebar_visible
 set sidebar_width = 20

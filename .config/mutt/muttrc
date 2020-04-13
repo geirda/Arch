@@ -1,0 +1,26 @@
+set folder = "imaps://username@email.com@imap.server.com:993"
+set smtp_url = "smtp://username@email.com@smtp.server.com:587"
+
+set smtp_pass = "********"
+set imap_pass = "********"
+
+set ssl_use_sslv3 = yes
+set ssl_force_tls = yes
+set ssl_starttls = yes
+
+set spoolfile = "+INBOX"
+set record = "+Sent"
+set trash = "+Trash"
+set postponed = "+Drafts"
+
+set from = "username@email.com"
+set realname = "Not My Real Name"
+
+mailboxes =INBOX =Sent =Trash =Drafts =Junk
+
+source ~/.config/mutt/color.muttrc
+
+set sidebar_visible
+set sidebar_width = 20
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set mail_check_stats

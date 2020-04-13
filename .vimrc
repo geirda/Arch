@@ -33,6 +33,12 @@ augroup vimrcEx
   autocmd FileType text setlocal textwidth=78
 augroup END
 
+" augroup cursorline
+"	autocmd!
+"	autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+"	autocmd WinLeave * setlocal nocursorline
+" augroup END
+
 " Add optional packages.
 "
 " The matchit plugin makes the % command work better, but it is not backwards
@@ -61,13 +67,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='angr'
 
-colo ron
-" set background=dark
+colo koehler
 syntax on
-
+set background=dark
 hi LineNr ctermfg=242
-hi CursorLineNr ctermfg=15 ctermbg=30
-" hi Normal ctermbg=0
-" hi VertSplit ctermfg=8 ctermbg=0
-" hi Statement ctermfg=3
 

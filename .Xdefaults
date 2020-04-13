@@ -36,7 +36,7 @@
 *.color15:      #e1e1e1
 
 ! xterm
-xterm*faceName: Hack:size=10:antialias=true
+xterm*faceName: Hack:size=12:antialias=true
 xterm*loginShell: true
 xterm*vt100*geometry: 90x34
 xterm*saveLines: 2000
@@ -55,7 +55,7 @@ URxvt*scrollBar_right: false
 URxvt*internalBorder: 0
 URxvt*externalBorder: 0
 URxvt*letterSpace: -1
-URxvt.font: xft:Hack:size=10
+URxvt.font: xft:Hack:size=12
 URxvt.copyCommand: xclip -i -selection clipboard
 URxvt.pasteCommand: xclip -o -selection clipboard
 URxvt.keysym.m-c: perl:clipboard:copy
@@ -76,7 +76,7 @@ UXTerm*termName: xterm-256color
 UXTerm*cursorColor: white
 UXTerm*VT100.geometry: 90x30
 UXTerm*font: DejaVu Sans Mono
-UXTerm*faceSize: 10
+UXTerm*faceSize: 12
 UXTerm*dynamicColors: true
 UXTerm*utf8: 2
 UXTerm*eightBitInput: true

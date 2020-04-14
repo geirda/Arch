@@ -6,6 +6,6 @@ do
 	DISKUSE="$(df -h | awk '/sda1/{ print $4 }')B"
 	IP=$(ip addr | awk '/ global /{ print $2 }')
 	DATO=$(date '+%a %d %b %H:%M')
-	xsetroot -name " Updates: $UPDATES |  Ram use: $RAM |  Free space: $DISKUSE |  $IP |  $DATO"
+	xsetroot -name " Updates: $UPDATES |  Ram use: $RAM |  Free space: $DISKUSE |  $IP |  $DATO"
 	sleep 5;
 done;

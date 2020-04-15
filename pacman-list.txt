@@ -12,7 +12,6 @@ broot
 cmus
 dash
 dashbinsh
-dhcpcd
 efibootmgr
 elinks
 exa
@@ -48,7 +47,6 @@ linux-lts
 lxappearance
 m4
 make
-memtest86+
 moc-pulse
 nano
 nano-syntax-highlighting
@@ -86,12 +84,14 @@ sed
 spaceship-prompt-git
 sudo
 sxiv
+sysstat
 taglib
 texinfo
 tilda
 ttf-hack
 ttf-symbola
 tuir
+unzip
 urlscan
 vifm
 vim-airline
@@ -153,6 +153,8 @@ xorg-xwd
 xorg-xwininfo
 xorg-xwud
 yay
+zathura
+zathura-pdf-mupdf
 zsh
 zsh-autosuggestions
 zsh-completions

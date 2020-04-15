@@ -70,5 +70,7 @@ let g:airline_theme='angr'
 colo koehler
 syntax on
 set background=dark
+set cursorline
 hi LineNr ctermfg=242
-
+hi CursorLine ctermbg=234 cterm=bold
+hi CursorLineNr ctermfg=248 ctermbg=234 cterm=bold

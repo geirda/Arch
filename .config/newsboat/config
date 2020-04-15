@@ -27,6 +27,6 @@ color listfocus black green standout bold
 color listnormal_unread blue default bold
 color listfocus_unread black yellow standout bold
 color info magenta black bold
-color article cyan default
+color article default default
 
 browser firefox

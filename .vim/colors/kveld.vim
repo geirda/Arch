@@ -1,6 +1,6 @@
 " Vim color file
 " Maintainer:	Geir Damstuen
-" Last Change:	2020 Mar 03
+" Last Change:	2020 Apr 15
 
 " Based on the evening color scheme. This color scheme uses a transparent background.
 
@@ -13,7 +13,7 @@ endif
 
 let colors_name = "kveld"
 
-hi Normal ctermfg=grey guifg=White guibg=grey20
+hi Normal ctermfg=Grey guifg=White guibg=grey20
 
 " Groups used in the 'highlight' and 'guicursor' options default value.
 hi ErrorMsg term=standout ctermbg=DarkRed ctermfg=White guibg=Red guifg=White
@@ -28,7 +28,7 @@ hi DiffText term=reverse cterm=bold ctermbg=Red gui=bold guibg=Red
 hi Cursor guibg=Green guifg=Black
 hi lCursor guibg=Cyan guifg=Black
 hi Directory term=bold ctermfg=LightCyan guifg=Cyan
-hi LineNr ctermfg=242 guifg=Grey
+hi LineNr term=underline ctermfg=242 guifg=Grey
 hi MoreMsg term=bold ctermfg=LightGreen gui=bold guifg=SeaGreen
 hi NonText term=bold ctermfg=LightBlue gui=bold guifg=LightBlue guibg=grey30
 hi Question term=standout ctermfg=LightGreen gui=bold guifg=Green
@@ -43,7 +43,8 @@ hi DiffAdd term=bold ctermbg=DarkBlue guibg=DarkBlue
 hi DiffChange term=bold ctermbg=DarkMagenta guibg=DarkMagenta
 hi DiffDelete term=bold ctermfg=Blue ctermbg=DarkCyan gui=bold guifg=Blue guibg=DarkCyan
 hi CursorColumn term=reverse ctermbg=Black guibg=grey40
-hi CursorLine term=bold cterm=bold ctermbg=242 guibg=grey27
+hi CursorLine ctermbg=235 cterm=bold guibg=grey11
+hi CursorLineNr ctermfg=248 ctermbg=235 cterm=bold guibg=grey11
 
 " Groups for syntax highlighting
 hi Constant term=underline ctermfg=Magenta guifg=#ffa0a0

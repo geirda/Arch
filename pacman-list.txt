@@ -10,6 +10,7 @@ bison
 brave-bin
 broot
 cmus
+cpu-x
 dash
 dashbinsh
 efibootmgr
@@ -17,6 +18,7 @@ elinks
 exa
 faad2
 fakeroot
+fbcat
 file
 findutils
 firefox
@@ -52,7 +54,9 @@ nano
 nano-syntax-highlighting
 neofetch
 neomutt
+nerd-fonts-hack
 nerd-fonts-jetbrains-mono
+nerd-fonts-roboto-mono
 netkit-bsd-finger
 networkmanager
 newsboat

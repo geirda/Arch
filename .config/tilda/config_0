@@ -1,6 +1,6 @@
 tilda_config_version="1.5.0"
 # command=""
-font="Hack NF 12"
+font="RobotoMono Nerd Font Mono 12"
 key="<Primary>less"
 addtab_key="<Shift><Control>t"
 fullscreen_key="F11"

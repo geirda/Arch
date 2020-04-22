@@ -56,6 +56,7 @@ vnoremap <C-c> "*y :let @+=@*<CR>
 set number
 set laststatus=2
 set t_Co=256
+set splitbelow splitright
 
 if &term =~ '256color'
 	" disable Background Color Erase (BCE) so that color schemes
@@ -77,4 +78,5 @@ hi CursorColumn ctermbg=234 cterm=bold
 hi CursorLine ctermbg=234 cterm=bold
 hi CursorLineNr ctermfg=248 ctermbg=234 cterm=bold
 hi StatusLine cterm=bold ctermbg=235 ctermfg=246
+hi VertSplit cterm=bold ctermbg=235 ctermfg=238
 hi WildMenu term=standout cterm=bold ctermbg=Green ctermfg=Black

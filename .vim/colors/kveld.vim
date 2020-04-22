@@ -1,7 +1,6 @@
 " Vim color file
 " Maintainer:	Geir Damstuen
 " Last Change:	2020 Apr 15
-
 " Based on the evening color scheme. This color scheme uses a transparent background.
 
 " First remove all existing highlighting.
@@ -19,9 +18,9 @@ hi Normal ctermfg=Grey guifg=White guibg=grey20
 hi ErrorMsg term=standout ctermbg=DarkRed ctermfg=White guibg=Red guifg=White
 hi IncSearch term=reverse cterm=reverse gui=reverse
 hi ModeMsg term=bold cterm=bold gui=bold
-hi StatusLine term=reverse,bold cterm=reverse,bold gui=reverse,bold
+hi StatusLine term=reverse,bold cterm=bold ctermbg=238 ctermfg=246 gui=reverse,bold
 hi StatusLineNC term=reverse cterm=reverse gui=reverse
-hi VertSplit term=reverse cterm=reverse gui=reverse
+hi VertSplit term=reverse cterm=bold ctermbg=238 ctermfg=241 gui=reverse
 hi Visual term=reverse ctermbg=black guibg=grey60
 hi VisualNOS term=underline,bold cterm=underline,bold gui=underline,bold
 hi DiffText term=reverse cterm=bold ctermbg=Red gui=bold guibg=Red
@@ -36,13 +35,13 @@ hi Search term=reverse ctermbg=Yellow ctermfg=Black guibg=Yellow guifg=Black
 hi SpecialKey term=bold ctermfg=LightBlue guifg=Cyan
 hi Title term=bold ctermfg=LightMagenta gui=bold guifg=Magenta
 hi WarningMsg term=standout ctermfg=LightRed guifg=Red
-hi WildMenu term=standout ctermbg=Yellow ctermfg=Black guibg=Yellow guifg=Black
+hi WildMenu term=standout cterm=bold ctermbg=Green ctermfg=Black guibg=Yellow guifg=Black
 hi Folded term=standout ctermbg=LightGrey ctermfg=DarkBlue guibg=LightGrey guifg=DarkBlue
 hi FoldColumn term=standout ctermbg=LightGrey ctermfg=DarkBlue guibg=Grey guifg=DarkBlue
 hi DiffAdd term=bold ctermbg=DarkBlue guibg=DarkBlue
 hi DiffChange term=bold ctermbg=DarkMagenta guibg=DarkMagenta
 hi DiffDelete term=bold ctermfg=Blue ctermbg=DarkCyan gui=bold guifg=Blue guibg=DarkCyan
-hi CursorColumn term=reverse ctermbg=Black guibg=grey40
+hi CursorColumn term=reverse ctermbg=235 guibg=grey11
 hi CursorLine ctermbg=235 cterm=bold guibg=grey11
 hi CursorLineNr ctermfg=248 ctermbg=235 cterm=bold guibg=grey11
 

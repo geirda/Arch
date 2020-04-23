@@ -9,6 +9,7 @@ binutils
 bison
 brave-bin
 broot
+checkupdates-aur
 cmus
 cpu-x
 dash
@@ -32,6 +33,7 @@ git
 go
 grep
 groff
+guake
 guvcview
 gvim
 gzip
@@ -87,11 +89,11 @@ scrot
 sed
 spaceship-prompt-git
 sudo
+sxhkd
 sxiv
 sysstat
 taglib
 texinfo
-tilda
 ttf-hack
 ttf-symbola
 tuir

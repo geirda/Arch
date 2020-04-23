@@ -72,8 +72,8 @@ set background=dark
 
 " Quick-scope
 let g:qs_highlight_on_keys = ['f', 'F']
-hi QuickScopePrimary cterm=underline
-hi QuickScopeSecondary cterm=underline
+hi QuickScopePrimary cterm=underline ctermfg=155
+hi QuickScopeSecondary cterm=underline ctermfg=81
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1

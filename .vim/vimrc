@@ -53,10 +53,12 @@ endif
 map <C-v> "*P
 vnoremap <C-c> "*y :let @+=@*<CR>
 
+" Misc settings
 set number
 set laststatus=2
 set t_Co=256
 set splitbelow splitright
+set cursorline
 
 if &term =~ '256color'
 	" disable Background Color Erase (BCE) so that color schemes
@@ -64,15 +66,22 @@ if &term =~ '256color'
 	set t_ut=
 endif
 
+colo koehler
+syntax on
+set background=dark
+
+" Quick-scope
+let g:qs_highlight_on_keys = ['f', 'F']
+hi QuickScopePrimary cterm=underline
+hi QuickScopeSecondary cterm=underline
+
+" Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#wordcount#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='badwolf'
 
-colo koehler
-syntax on
-set background=dark
-set cursorline
+" Colors
 hi LineNr ctermfg=242
 hi CursorColumn ctermbg=234 cterm=bold
 hi CursorLine ctermbg=234 cterm=bold

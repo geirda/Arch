@@ -14,6 +14,7 @@ super + m
 super + b
  bspc desktop -B
 
+# change gap size
 super + {_,shift + }z
  $HOME/.config/sxhkd/gap{inc,dec}.sh
 
@@ -41,8 +42,14 @@ super + y
 super + c
  bspc node -s biggest
 
-super + {_,shift + }{h,j,k,l}
- bspc node -{f,s} {west,south,north,east}
+super + {_,shift + }{j,k}
+ bspc node -{f,s} {next,prev}.local
+
+super + {h,l}
+ bspc node -z {right -20 0,right 20 0}
+
+super + shift + {h,l}
+ bspc node -z {left -20 0,left 20 0}
 
 super + {_,shift + }{a,s,w,d}
  bspc node -{f,s} {west,south,north,east}
@@ -62,10 +69,10 @@ super + ctrl + {a,s,w,d}
 super + ctrl + {_,shift + }space
  bspc {node -p cancel,desktop -c}
 
-alt + super + {h,j,k,l}
+hyper + {h,j,k,l}
  bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
-alt + super + shift + {h,j,k,l}
+hyper + shift + {h,j,k,l}
  bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 super + ctrl + {1-9}
@@ -81,14 +88,44 @@ super + {_,shift + }{1-9,0}
 super + Return
  st
 
-super + p
- dmenu_run -fn "Hack:size=10" -nb "#1c2023" -nf "#a7a7a7" -sb "#5f819d" -p "dmenu:"
+hyper + Return
+ tilix
 
-super + space
- pcmanfm
+alt + ctrl + t
+ xfce4-terminal
+
+super + p
+ dmenu_run -h 19 -p "dmenu:"
+# dmenu_run -fn "Hack:size=10" -nb "#1c2023" -nf "#d0d0d0" -sb "#df4a16" -p "dmenu:"
+
+hyper + d
+ dmenu_run -h 19 -p "dmenu:"
+
+hyper + f
+ thunar
+
+hyper + w
+ vivaldi
+
+hyper + s
+ firefox
 
 super + x
  rofi -show combi
+
+#Volume Control
+#XF86AudioLowerVolume
+# amixer set Master 5%-
+#XF86AudioRaiseVolume
+# amixer set Master 5%+
+#XF86AudioMute
+#        amixer set Master toggle
+
+#Brightness control
+#XF86MonBrightnessDown
+# xbacklight -dec 5
+#XF86MonBrightnessUp
+# xbacklight -inc 5
 
 # make sxhkd reload its configuration files:
 super + r

@@ -24,3 +24,4 @@ set sidebar_visible
 set sidebar_width = 20
 set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
 set mail_check_stats
+bind index,pager B sidebar-toggle-visible

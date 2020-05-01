@@ -65,6 +65,7 @@ newsboat
 nfs-utils
 nitrogen
 nm-connection-editor
+nmap
 numlockx
 opendoas
 openssh
@@ -102,6 +103,7 @@ urlscan
 vifm
 vim-airline
 vim-devicons
+vim-nerdtree
 vimix-gtk-themes
 virtualbox
 wavpack

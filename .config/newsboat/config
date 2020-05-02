@@ -1,7 +1,9 @@
 #show-read-feeds no
 auto-reload yes
-
+always-display-description yes
 external-url-viewer "firefox"
+browser firefox
+articlelist-format "%4i %f %D %6L  %?T?%-17T│ ?%t"
 
 bind-key j down
 bind-key k up
@@ -15,6 +17,7 @@ bind-key d pagedown
 bind-key u pageup
 bind-key l open
 bind-key h quit
+bind-key q quit
 bind-key a toggle-article-read
 bind-key n next-unread
 bind-key N prev-unread
@@ -22,11 +25,23 @@ bind-key D pb-download
 bind-key U show-urls
 bind-key x pb-delete
 
-color listnormal blue default
-color listfocus black green standout bold
-color listnormal_unread blue default bold
-color listfocus_unread black yellow standout bold
-color info magenta black bold
-color article default default
+color listnormal color103 default
+color listfocus color235 green standout 
+color listnormal_unread color104 default bold
+color listfocus_unread color235 green standout bold
+color info color178 color236 bold
+color article color247 default
 
-browser firefox
+highlight article "(^Strøm:.*)" color68 default
+highlight article "(^Forfatter:.*)" cyan default
+highlight article "^(Tittel):.*$" green default bold
+highlight article "(^Dato:.*)" white default
+highlight article "(^Lenke:)" green default
+highlight article "https?://[^ ]+" color167 default
+
+highlight article "\\[[0-9][0-9]*\\]" magenta default bold
+highlight article "\\[image\\ [0-9]+\\]" green default bold
+highlight article "\\[embedded flash: [0-9][0-9]*\\]" green default bold
+highlight article ":.*\\(link\\)$" cyan default
+highlight article ":.*\\(image\\)$" blue default
+highlight article ":.*\\(embedded flash\\)$" magenta default

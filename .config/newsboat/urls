@@ -1,8 +1,6 @@
 https://www.archlinux.org/feeds/news/
 https://www.archlinux.org/feeds/packages/added/x86_64/stable-repos/
-#https://aur.archlinux.org/rss/
-https://forum.manjaro.org/c/announcements.rss
 http://rss.slashdot.org/Slashdot/slashdotLinuxatom
-#https://reddit.com/r/linux/.rss
-#https://reddit.com/r/archlinux/.rss
-#https://reddit.com/r/BSD/.rss
+https://news.ycombinator.com/rss
+https://forum.manjaro.org/c/announcements.rss
+https://suckless.org/atom.xml

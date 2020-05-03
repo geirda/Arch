@@ -15,8 +15,11 @@ bind-key G end
 bind-key g home
 bind-key d pagedown
 bind-key u pageup
+bind-key RIGHT open
+bind-key LEFT quit
 bind-key l open
 bind-key h quit
+bind-key BACKSPACE quit
 bind-key q quit
 bind-key a toggle-article-read
 bind-key n next-unread
@@ -25,10 +28,10 @@ bind-key D pb-download
 bind-key U show-urls
 bind-key x pb-delete
 
-color listnormal color103 default
-color listfocus color235 green standout 
-color listnormal_unread color104 default bold
-color listfocus_unread color235 green standout bold
+color listnormal color105 default
+color listfocus color235 color149 standout 
+color listnormal_unread color111 default bold
+color listfocus_unread color235 color149 standout bold
 color info color178 color236 bold
 color article color247 default
 
@@ -40,8 +43,8 @@ highlight article "(^Lenke:)" green default
 highlight article "https?://[^ ]+" color167 default
 
 highlight article "\\[[0-9][0-9]*\\]" magenta default bold
-highlight article "\\[image\\ [0-9]+\\]" green default bold
+highlight article "\\[bilde\\ [0-9]+\\]" cyan default bold
 highlight article "\\[embedded flash: [0-9][0-9]*\\]" green default bold
-highlight article ":.*\\(link\\)$" cyan default
-highlight article ":.*\\(image\\)$" blue default
+highlight article ":.*\\(lenke\\)$" color138 default
+highlight article ":.*\\(bilde\\)$" blue default
 highlight article ":.*\\(embedded flash\\)$" magenta default

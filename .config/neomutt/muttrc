@@ -1,8 +1,10 @@
-set folder = "imaps://username@email.com@imap.server.com:993"
-set smtp_url = "smtp://username@email.com@smtp.server.com:587"
+source "gpg -dq $HOME/.config/neomutt/pass.gpg |"
 
-set smtp_pass = "********"
-set imap_pass = "********"
+set folder = "imaps://user@email.com@imap.email.com:993"
+set smtp_url = "smtp://user@email.com@smtp.email.com:587"
+
+set smtp_pass = $my_pass
+set imap_pass = $my_pass
 
 set ssl_use_sslv3 = yes
 set ssl_force_tls = yes
@@ -13,12 +15,12 @@ set record = "+Sent"
 set trash = "+Trash"
 set postponed = "+Drafts"
 
-set from = "username@email.com"
-set realname = "Not My Real Name"
+set from = "user@email.com"
+set realname = "Ola Nordmann"
 
 mailboxes =INBOX =Sent =Trash =Drafts =Junk
 
-source ~/.config/neomutt/color.muttrc
+source $HOME/.config/neomutt/color.muttrc
 
 set sidebar_visible
 set sidebar_width = 20

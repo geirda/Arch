@@ -6,7 +6,7 @@ Slightly patched and modified.
 	Patches: lineheight
 
 * dwm: modified colors, RobotoMono Nerd Font.
-	Patches: attachbelow, autostart, rotatestack, ru_gaps, status2d, statuspadding, titlecolor
+	Patches: attachbelow, autostart, rotatestack, ru_gaps, status2d, statuspadding, switchtotag, titlecolor
 
 * st: modified colors, Hack Nerd Font.
 	Patches: alphaFocusHighlight, scrollback, scrollback-mouse, scrollback-mouse-altscreen

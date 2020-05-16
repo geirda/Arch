@@ -53,20 +53,26 @@ endif
 map <C-v> "*P
 vnoremap <C-c> "*y :let @+=@*<CR>
 
+" set Vim-specific sequences for RGB colors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
 " Misc settings
 set number
 set laststatus=2
-set t_Co=256
+" set t_Co=256
+set termguicolors
 set splitbelow splitright
 set cursorline
+set cursorcolumn
 
-if &term =~ '256color'
+"if &term =~ '256color'
 	" disable Background Color Erase (BCE) so that color schemes
 	" render properly when inside 256-color tmux and GNU screen.
-	set t_ut=
-endif
+"	set t_ut=
+"endif
 
-colo koehler
+colo kveld
 syntax on
 set background=dark
 
@@ -75,17 +81,25 @@ let g:qs_highlight_on_keys = ['f', 'F']
 hi QuickScopePrimary cterm=underline ctermfg=155
 hi QuickScopeSecondary cterm=underline ctermfg=81
 
+" NerdTree
+let NERDTreeAutoDeleteBuffer = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+let NERDTreeQuitOnOpen = 1
+nmap <F5> :NERDTreeToggle<CR>
+nmap <F6> :NERDTreeFind<CR>
+
 " Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#wordcount#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme='badwolf'
+let g:airline_theme='base16_default'
 
 " Colors
-hi LineNr ctermfg=242
-hi CursorColumn ctermbg=234 cterm=bold
-hi CursorLine ctermbg=234 cterm=bold
-hi CursorLineNr ctermfg=248 ctermbg=234 cterm=bold
-hi StatusLine cterm=bold ctermbg=235 ctermfg=246
-hi VertSplit cterm=bold ctermbg=235 ctermfg=238
-hi WildMenu term=standout cterm=bold ctermbg=Green ctermfg=Black
+hi LineNr ctermfg=242 guifg=#6c6c6c
+hi CursorColumn ctermbg=234 cterm=bold guibg=#1c1c1c
+hi CursorLine ctermbg=234 cterm=bold guibg=#1c1c1c
+hi CursorLineNr ctermfg=248 ctermbg=234 cterm=bold guifg=#a8a8a8 guibg=#1c1c1c
+hi StatusLine cterm=bold ctermbg=235 ctermfg=246 guibg=#262626 guifg=#949494
+hi VertSplit cterm=bold ctermbg=235 ctermfg=238 guibg=#262626 guifg=#444444
+hi WildMenu term=standout cterm=bold ctermbg=Green ctermfg=Black guibg=#a1b56c guifg=Black

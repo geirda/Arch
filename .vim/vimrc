@@ -72,7 +72,7 @@ set cursorcolumn
 "	set t_ut=
 "endif
 
-colo kveld
+colo kuhler
 syntax on
 set background=dark
 

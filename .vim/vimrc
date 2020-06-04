@@ -1,12 +1,13 @@
 " An example for a vimrc file.
 "
 " Maintainer:	Bram Moolenaar <Bram@vim.org>
-" Last change:	2019 Jan 26
+" Last change:	2019 Dec 17
 "
 " To use it, copy it to
-"     for Unix and OS/2:  ~/.vimrc
+"	       for Unix:  ~/.vimrc
 "	      for Amiga:  s:.vimrc
-"  for MS-DOS and Win32:  $VIM\_vimrc
+"	 for MS-Windows:  $VIM\_vimrc
+"	      for Haiku:  ~/config/settings/vim/vimrc
 "	    for OpenVMS:  sys$login:.vimrc
 
 " When started as "evim", evim.vim will already have done these settings, bail
@@ -17,8 +18,6 @@ endif
 
 " Get the defaults that most users want.
 source $VIMRUNTIME/defaults.vim
-
-set nobackup
 
 if &t_Co > 2 || has("gui_running")
   " Switch on highlighting the last used search pattern.
@@ -33,12 +32,6 @@ augroup vimrcEx
   autocmd FileType text setlocal textwidth=78
 augroup END
 
-" augroup cursorline
-"	autocmd!
-"	autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-"	autocmd WinLeave * setlocal nocursorline
-" augroup END
-
 " Add optional packages.
 "
 " The matchit plugin makes the % command work better, but it is not backwards
@@ -49,6 +42,10 @@ if has('syntax') && has('eval')
   packadd! matchit
 endif
 
+" Make shift-insert work like in Xterm
+map <S-Insert> <MiddleMouse>
+map! <S-Insert> <MiddleMouse>
+
 " Copy and paste
 map <C-v> "*P
 vnoremap <C-c> "*y :let @+=@*<CR>
@@ -58,23 +55,16 @@ let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 " Misc settings
+set nobackup
 set number
+set mousehide
 set laststatus=2
-" set t_Co=256
 set termguicolors
 set splitbelow splitright
 set cursorline
 set cursorcolumn
-
-"if &term =~ '256color'
-	" disable Background Color Erase (BCE) so that color schemes
-	" render properly when inside 256-color tmux and GNU screen.
-"	set t_ut=
-"endif
-
-colo kuhler
-syntax on
-set background=dark
+set ignorecase
+set smartcase
 
 " Quick-scope
 let g:qs_highlight_on_keys = ['f', 'F']
@@ -96,6 +86,7 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='base16_default'
 
 " Colors
+colo kuhler
 hi LineNr ctermfg=242 guifg=#6c6c6c
 hi CursorColumn ctermbg=234 cterm=bold guibg=#1c1c1c
 hi CursorLine ctermbg=234 cterm=bold guibg=#1c1c1c

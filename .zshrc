@@ -13,7 +13,7 @@ setopt histfindnodups
 setopt incappendhistory
 setopt sharehistory
 setopt appendhistory
-HISTFILE=~/.cache/zsh-history
+HISTFILE=~/.local/share/zsh/history
 HISTSIZE=1000
 SAVEHIST=1000
 
@@ -34,6 +34,28 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
     zle -N zle-line-init
     zle -N zle-line-finish
 fi
+
+POWERLEVEL9K_COLOR_SCHEME='dark'
+POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='239'
+POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='187'
+POWERLEVEL9K_CONTEXT_REMOTE_BACKGROUND='024'
+POWERLEVEL9K_CONTEXT_REMOTE_FOREGROUND='255'
+POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='246'
+POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='000'
+POWERLEVEL9K_DIR_HOME_BACKGROUND='246'
+POWERLEVEL9K_DIR_HOME_FOREGROUND='000'
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='246'
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='000'
+POWERLEVEL9K_STATUS_OK_BACKGROUND='008'
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+POWERLEVEL9K_SHORTEN_DELIMITER=""
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
+POWERLEVEL9K_VCS_CLEAN_BACKGROUND='011'
+POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='008'
+POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='010'
+POWERLEVEL9K_VCS_MAX_SYNC_LATENCY_SECONDS='0.05'
+POWERLEVEL9K_VI_INSERT_MODE_STRING='INSERT'
+POWERLEVEL9K_VI_COMMAND_MODE_STRING='NORMAL'﻿
 
 SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_PROMPT_SEPARATE_LINE=false
@@ -71,6 +93,15 @@ prompt spaceship
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+#case "$TERM" in
+#linux*)
+#	PS1='%B%F{green}%n@%m %B%F{blue}%~%F{reset}%b> '
+#	;;
+#*)
+#	source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+#	;;
+#esac
+
 # colors in less (default PAGER in Arch)
 export LESS_TERMCAP_mb=$'\E[01;31m'
 export LESS_TERMCAP_md=$'\E[01;31m'
@@ -103,12 +134,15 @@ alias ..='cd ..'
 alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
+alias grep='grep --color'
 alias upd='sudo pacman -Syyu'
 alias pac='sudo pacman --color auto'
 alias merge='xrdb -merge ~/.Xresources'
 alias grubup='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias mirrors='sudo reflector --score 100 --fastest 25 \
     --sort rate --save /etc/pacman.d/mirrorlist --verbose'
+alias ranger='ranger&&tittel.zsh'
+alias tuir='tuir&&tittel.zsh'
 
 # key bindings
 bindkey "\e[1~" beginning-of-line
@@ -144,4 +178,12 @@ case "$TERM" in
 xterm*)
 	cd ~/
 	;;
+st*)
+	source ~/.config/lf/st.zsh
+	;;
+alacritty*)
+	source ~/.config/lf/alacritty.zsh
+	;;
 esac
+
+source /home/geir/.config/broot/launcher/bash/br

@@ -1,4 +1,4 @@
 rofi.combi-modi:    window,drun
-rofi.theme:         solarized
-rofi.font:          Hack 12
+rofi.theme:         android_notification
+rofi.font:          Hack Nerd Font 12
 rofi.modi:          combi,run

@@ -1,132 +1,91 @@
-#
-#bspwm hotkeys
-#
-
-super + shift + e
- pkill polybar;pkill conky;bspc quit
-
-super + shift + q
- bspc node -c
-
-super + m
- bspc desktop -l next
-
-super + b
- bspc desktop -B
-
-# change gap size
-super + {_,shift + }z
- $HOME/.config/sxhkd/gap{inc,dec}.sh
-
-# set the window state
-super + {_,shift + }t
- bspc node -t {floating,tiled}
-
-super + f
- bspc node -t fullscreen
-
-super + {grave,Tab}
- bspc {node,desktop} -f last
-
-super + apostrophe
- bspc node -s last
-
-super + {o,i}
- bspc control --record-history off; \
- bspc node {older,newer} -f; \
- bspc control --record-history on
-
-super + y
- bspc node -w last.manual
-
-super + c
- bspc node -s biggest
-
-super + {_,shift + }{j,k}
- bspc node -{f,s} {next,prev}.local
-
-super + {h,l}
- bspc node -z {right -20 0,right 20 0}
-
-super + shift + {h,l}
- bspc node -z {left -20 0,left 20 0}
-
-super + {_,shift + }{a,s,w,d}
- bspc node -{f,s} {west,south,north,east}
-
-super + {comma,period}
- bspc desktop -C {backward,forward}
-
-super + bracket{left,right}
- bspc desktop -f {prev,next}
-
-super + ctrl + {h,j,k,l}
- bspc node -p {west,south,north,east}
-
-super + ctrl + {a,s,w,d}
- bspc node -p {west,south,north,east}
-
-super + ctrl + {_,shift + }space
- bspc {node -p cancel,desktop -c}
-
-hyper + {h,j,k,l}
- bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
-
-hyper + shift + {h,j,k,l}
- bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
-
-super + ctrl + {1-9}
- bspc node -r 0.{1-9}
-
-super + {_,shift + }{1-9,0}
- bspc {desktop -f,node -d} ^{1-9,10}
-
-#
-# wm independent hotkeys
-#
-
-super + Return
- st
-
+# Misc launchers
 hyper + Return
- tilix
+ alacritty
 
-alt + ctrl + t
- xfce4-terminal
-
-super + p
- dmenu_run -h 19 -p "dmenu:"
-# dmenu_run -fn "Hack:size=10" -nb "#1c2023" -nf "#d0d0d0" -sb "#df4a16" -p "dmenu:"
-
-hyper + d
- dmenu_run -h 19 -p "dmenu:"
-
-hyper + f
- thunar
-
-hyper + w
- vivaldi
+super + x
+ rofi -show combi -width 35
 
 hyper + s
  firefox
 
-super + x
- rofi -show combi
+hyper + w
+ brave
 
-#Volume Control
-#XF86AudioLowerVolume
-# amixer set Master 5%-
-#XF86AudioRaiseVolume
-# amixer set Master 5%+
-#XF86AudioMute
-#        amixer set Master toggle
+hyper + f
+ pcmanfm
 
-#Brightness control
-#XF86MonBrightnessDown
-# xbacklight -dec 5
-#XF86MonBrightnessUp
-# xbacklight -inc 5
+hyper + e
+ gimp
 
-# make sxhkd reload its configuration files:
-super + r
+hyper + {_,shift + } n
+ {nyheter.sh,nyheitar.sh}
+
+hyper + v
+ rofi -width 15 -e "$($HOME/.local/bin/vær.sh)"
+
+# Firefox quick launchers
+hyper + 1
+ browser.sh https://github.com/geirda
+
+hyper + 2
+ browser.sh https://gitlab.com/dwt1/dotfiles
+
+hyper + 3
+ browser.sh https://gitlab.com/OldTechBloke/dotfiles/
+
+hyper + 4
+ browser.sh https://github.com/lukesmithxyz
+
+hyper + 5
+ browser.sh https://github.com/BrodieRobertson
+
+hyper + g
+ browser.sh https://gmail.google.com
+
+hyper + k
+ browser.sh https://keep.google.com
+
+hyper + y
+ browser.sh https://www.youtube.com
+
+hyper + m
+ browser.sh https://maps.google.com
+
+hyper + t
+ browser.sh https://translate.google.com
+
+hyper + a
+ SOK=$(rofi -dmenu -width 30 -l 0 -p "   Arch Wiki"); [ -z $SOK ] || browser.sh "https://wiki.archlinux.org/?search=$SOK"
+
+hyper + u
+ SOK=$(rofi -dmenu -width 30 -l 0 -p "   Urban Dictionary"); [ -z $SOK ] || browser.sh "https://www.urbandictionary.com/define.php?term=$SOK"
+
+# FN-buttons
+XF86HomePage
+ browser.sh https://en.wikipedia.org
+
+XF86Mail
+ browser.sh https://gmail.google.com
+
+XF86Search
+ SOK=$(rofi -dmenu -width 30 -l 0 -p "   DuckDuckGo"); [ -z $SOK ] || browser.sh "https://duckduckgo.com/?t=ffnt&q=$SOK"
+
+XF86Calculator
+ galculator
+
+XF86Tools
+ browser.sh https://www.youtube.com
+
+# Volume Control
+XF86AudioLowerVolume
+ amixer set Master 5%-
+
+XF86AudioRaiseVolume
+ amixer set Master 5%+
+
+XF86AudioMute
+ amixer set Master toggle
+
+# Restart sxhkd
+super +r
  pkill -USR1 -x sxhkd

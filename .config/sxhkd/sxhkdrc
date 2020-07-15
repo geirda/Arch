@@ -60,6 +60,9 @@ hyper + a
 hyper + u
  SOK=$(rofi -dmenu -width 30 -l 0 -p "   Urban Dictionary"); [ -z $SOK ] || browser.sh "https://www.urbandictionary.com/define.php?term=$SOK"
 
+super + w
+ SOK=$(rofi -dmenu -width 30 -l 0 -p "   Wikipedia language code"); [ -z $SOK ] || browser.sh "https://${SOK}.wikipedia.org"
+
 # FN-buttons
 XF86HomePage
  browser.sh https://en.wikipedia.org

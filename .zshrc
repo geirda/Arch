@@ -134,15 +134,17 @@ alias ..='cd ..'
 alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
+alias diff='diff --color'
 alias grep='grep --color'
+alias ip='ip --color'
 alias upd='sudo pacman -Syyu'
 alias pac='sudo pacman --color auto'
 alias merge='xrdb -merge ~/.Xresources'
 alias grubup='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias mirrors='sudo reflector --score 100 --fastest 25 \
     --sort rate --save /etc/pacman.d/mirrorlist --verbose'
-alias ranger='ranger&&tittel.zsh'
-alias tuir='tuir&&tittel.zsh'
+alias ranger='ranger && tittel.zsh'
+alias tuir='tuir --theme bue && echo -n -e "\033]0;${TERM%%-*}\007"'
 
 # key bindings
 bindkey "\e[1~" beginning-of-line
@@ -177,6 +179,7 @@ fortune
 case "$TERM" in
 xterm*)
 	cd ~/
+#	source ~/.config/lf/alacritty.zsh
 	;;
 st*)
 	source ~/.config/lf/st.zsh

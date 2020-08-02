@@ -22,6 +22,24 @@ mailboxes =INBOX =Sent =Trash =Drafts =Junk
 
 source $HOME/.config/neomutt/color.muttrc
 
+set header_cache = "~/.cache/mutt"
+set edit_headers = yes
+
+set sort = threads
+set sort_aux = reverse-last-date-received
+set sort_re
+
+set pager_index_lines = 7
+set pager_context = 3
+set pager_stop
+set menu_scroll
+set tilde
+unset markers
+
+set delete
+set delete_untag
+unset confirmappend
+
 set sidebar_visible
 set sidebar_width = 20
 set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"

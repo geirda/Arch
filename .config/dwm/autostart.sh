@@ -1,5 +1,7 @@
 #!/bin/sh
-picom -b &
+sxhkd &
+picom --config $HOME/.config/picom.conf -b &
 nitrogen --restore &
-tilda -h -g $HOME/.config/tilda/config_0 &
-$HOME/.config/dwm/statusbar.sh
+guake &
+mouse.sh &
+$HOME/.config/dwm/statusbar-color.sh

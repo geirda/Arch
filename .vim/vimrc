@@ -28,7 +28,7 @@ endif
 augroup vimrcEx
   au!
 
-  " For all text files set 'textwidth' to 78 characters.
+" For all text files set 'textwidth' to 78 characters.
   autocmd FileType text setlocal textwidth=78
 augroup END
 
@@ -50,7 +50,7 @@ map! <S-Insert> <MiddleMouse>
 map <C-v> "*P
 vnoremap <C-c> "*y :let @+=@*<CR>
 
-" set Vim-specific sequences for RGB colors
+" Set Vim-specific sequences for RGB colors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
@@ -59,12 +59,18 @@ set nobackup
 set number
 set mousehide
 set laststatus=2
-set termguicolors
 set splitbelow splitright
 set cursorline
 set cursorcolumn
 set ignorecase
 set smartcase
+ 
+" Use 256 colors for xterm
+if &term =~ 'xterm'
+  set t_Co=256
+else
+  set termguicolors
+endif
 
 " Quick-scope
 let g:qs_highlight_on_keys = ['f', 'F']

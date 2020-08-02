@@ -1,20 +1,23 @@
 # Misc launchers
+hyper + h
+ rofi -width 22 -location 2 -e "$(cat $HOME/Dokumenter/keybindings.txt)"
+
 hyper + Return
  alacritty
+
+hyper + space
+ pcmanfm
 
 super + x
  rofi -show combi -width 35
 
-hyper + s
+hyper + f
  firefox
 
-hyper + w
+hyper + b
  brave
 
-hyper + f
- pcmanfm
-
-hyper + e
+hyper + g
  gimp
 
 hyper + {_,shift + } n
@@ -24,29 +27,11 @@ hyper + v
  rofi -width 15 -e "$($HOME/.local/bin/vær.sh)"
 
 # Firefox quick launchers
-hyper + 1
- browser.sh https://github.com/geirda
-
-hyper + 2
- browser.sh https://gitlab.com/dwt1/dotfiles
-
-hyper + 3
- browser.sh https://gitlab.com/OldTechBloke/dotfiles/
-
-hyper + 4
- browser.sh https://github.com/lukesmithxyz
-
-hyper + 5
- browser.sh https://github.com/BrodieRobertson
-
-hyper + g
- browser.sh https://gmail.google.com
+super + w
+ SOK=$(rofi -dmenu -width 30 -l 0 -p "   Wikipedia language code"); [ -z $SOK ] || browser.sh "https://${SOK}.wikipedia.org"
 
 hyper + k
  browser.sh https://keep.google.com
-
-hyper + y
- browser.sh https://www.youtube.com
 
 hyper + m
  browser.sh https://maps.google.com
@@ -54,14 +39,38 @@ hyper + m
 hyper + t
  browser.sh https://translate.google.com
 
+hyper + y
+ browser.sh https://www.youtube.com
+
+hyper + w
+ SOK=$(rofi -dmenu -width 30 -l 0 -p "   Wikipedia"); [ -z $SOK ] || browser.sh "https://en.wikipedia.org/wiki/$SOK"
+
 hyper + a
  SOK=$(rofi -dmenu -width 30 -l 0 -p "   Arch Wiki"); [ -z $SOK ] || browser.sh "https://wiki.archlinux.org/?search=$SOK"
+
+hyper + r
+ SOK=$(rofi -dmenu -width 30 -l 0 -p "   Telefonterror"); [ -z $SOK ] || browser.sh "https://www.telefonterror.co.no/nummer/$SOK"
 
 hyper + u
  SOK=$(rofi -dmenu -width 30 -l 0 -p "   Urban Dictionary"); [ -z $SOK ] || browser.sh "https://www.urbandictionary.com/define.php?term=$SOK"
 
-super + w
- SOK=$(rofi -dmenu -width 30 -l 0 -p "   Wikipedia language code"); [ -z $SOK ] || browser.sh "https://${SOK}.wikipedia.org"
+hyper + 1
+ browser.sh https://github.com/geirda
+
+hyper + 2
+ browser.sh https://github.com/atlesn
+
+hyper + 3
+ browser.sh https://gitlab.com/dwt1/dotfiles
+
+hyper + 4
+ browser.sh https://github.com/lukesmithxyz
+
+hyper + 5
+ browser.sh https://gitlab.com/OldTechBloke/dotfiles/
+
+hyper + 6
+ browser.sh https://github.com/BrodieRobertson
 
 # FN-buttons
 XF86HomePage
@@ -77,7 +86,7 @@ XF86Calculator
  galculator
 
 XF86Tools
- browser.sh https://www.youtube.com
+ browser.sh https://focus10music.bandcamp.com
 
 # Volume Control
 XF86AudioLowerVolume

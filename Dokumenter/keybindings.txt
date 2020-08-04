@@ -1,0 +1,40 @@
+Tastatursnarveier:
+
+	hyper + h: vis hjelpskjerm, lukk med <enter>
+
+	super + enter: terminal (st)
+	hyper + enter: terminal (alacritty)
+	hyper + space: file manager (pcmanfm)
+	hyper + d: quicklauncher (dmenu)
+	hyper + r: quicklauncher (rofi)
+
+	hyper + f: firefox
+	hyper + b: brave browser
+	hyper + g: gimp
+	fn  +  f4: kalkulator
+
+	hyper + n: nyheter (overskrifter)
+	hyper + shift + n: nyheter (med ingresser)
+	hyper + v: vær
+
+	super + w: wikipedia (velg språkkode)
+	fn  +  f1: wikipedia (engelsk)
+	fn  +  f2: gmail
+	hyper + k: google keep
+	hyper + m: google maps
+	hyper + t: google translate
+	hyper + y: youtube
+
+	fn  +  f3: søk duckduckgo
+	hyper + w: søk wikipedia
+	hyper + a: søk arch wiki
+	hyper + x: søk telefonterror
+	hyper + u: søk urban dictionary
+
+	hyper + 1: github (meg)
+	hyper + 2: github (Atle)
+	hyper + 3: gitlab (DT)
+	hyper + 4: github (Luke Smith)
+	hyper + 5: gitlab (OTB)
+	hyper + 6: github (Brodie Robertson)
+.

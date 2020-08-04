@@ -5,7 +5,7 @@ Slightly patched and modified.
 * dmenu:
 	Patches: lineheight
 
-* dwm: modified colors, RobotoMono Nerd Font.
+* dwm: modified colors, RobotoMono Nerd Font, Hack Font.
 	Patches: attachbelow, autostart, rotatestack, ru_gaps, status2d, statuspadding, switchtotag, titlecolor
 
 * st: modified colors, Hack Nerd Font.

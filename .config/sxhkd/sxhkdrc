@@ -8,6 +8,9 @@ hyper + Return
 hyper + space
  pcmanfm
 
+hyper + r
+ rofi -show combi -width 35
+
 super + x
  rofi -show combi -width 35
 
@@ -24,7 +27,10 @@ hyper + {_,shift + } n
  {nyheter.sh,nyheitar.sh}
 
 hyper + v
- rofi -width 15 -e "$($HOME/.local/bin/vær.sh)"
+ rofi -width 25 -e "$($HOME/.local/bin/vær.sh)"
+
+Print
+ scrot
 
 # Firefox quick launchers
 super + w
@@ -48,7 +54,7 @@ hyper + w
 hyper + a
  SOK=$(rofi -dmenu -width 30 -l 0 -p "   Arch Wiki"); [ -z $SOK ] || browser.sh "https://wiki.archlinux.org/?search=$SOK"
 
-hyper + r
+hyper + x
  SOK=$(rofi -dmenu -width 30 -l 0 -p "   Telefonterror"); [ -z $SOK ] || browser.sh "https://www.telefonterror.co.no/nummer/$SOK"
 
 hyper + u

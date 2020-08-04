@@ -1,23 +1,24 @@
 #!/bin/sh
+ICONPATH=/usr/share/icons/Paper/16x16
 
 cat <<EOF | xmenu | sh &
-File manager (PCManFM)		pcmanfm
+IMG:$ICONPATH/apps/nautilus.png			File manager (PCManFM)		pcmanfm
 
-Web browser (firefox)		firefox
-Web browser (brave)		brave
-Word processor (lowriter)	lowriter
-Image manipulation (gimp)	gimp
-Password manager (KeePass)	keepassxc
+IMG:$ICONPATH/apps/firefox.png			Web browser (firefox)		firefox
+IMG:$ICONPATH/apps/brave.png			Web browser (brave)		brave
+IMG:$ICONPATH/apps/libreoffice-writer.png	Word processor (lowriter)	lowriter
+IMG:$ICONPATH/apps/gimp.png			Image manipulation (gimp)	gimp
 
-Virtualbox			virtualbox
+IMG:$ICONPATH/apps/keepassxc.png		Password manager (KeePass)	keepassxc
+IMG:$ICONPATH/apps/virtualbox.png		Virtualbox			virtualbox
 
-Terminal (alacritty)		alacritty
-Terminal (st)			st
+IMG:$ICONPATH/apps/terminal.png			Terminal (alacritty)		alacritty
+IMG:$ICONPATH/apps/terminal.png			Terminal (st)			st
 
-Appearance			lxappearance
-Wallpaper			nitrogen
+IMG:$ICONPATH/categories/gtk-preferences.png	Appearance			lxappearance
+IMG:$ICONPATH/apps/wallpaper.png		Wallpaper			nitrogen
 
-Shutdown			poweroff
-Reboot				reboot
+IMG:$ICONPATH/actions/system-shutdown.png	Shutdown			poweroff
+IMG:$ICONPATH/actions/system-reboot.png		Reboot				reboot
 EOF
 

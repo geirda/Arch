@@ -6,7 +6,7 @@ atool
 autoconf
 automake
 base
-bind-tools
+bind
 binutils
 bison
 brave-bin
@@ -15,10 +15,12 @@ chafa
 checkbashisms
 checkupdates-aur
 cmus
+colord-gtk
 colorpicker
 cpu-x
 dash
 dashbinsh
+dragon-drag-and-drop
 efibootmgr
 elinks
 exa
@@ -51,6 +53,7 @@ keepassxc
 kvantum-qt5
 lf
 libmpcdec
+libreoffice-fresh
 libtool
 linux
 linux-firmware
@@ -66,6 +69,7 @@ nano
 nano-syntax-highlighting
 neofetch
 neomutt
+nerd-fonts-fira-code
 nerd-fonts-hack
 nerd-fonts-jetbrains-mono
 netkit-bsd-finger
@@ -91,11 +95,9 @@ picom
 pkgconf
 pulseaudio-alsa
 pulsemixer
-python-ueberzug
 qt5ct
 ranger
 rofi
-rrr
 rsync
 scrot
 sed
@@ -110,8 +112,10 @@ ttf-font-awesome
 ttf-hack
 ttf-jetbrains-mono
 ttf-joypixels
+ttf-roboto-mono
 ttf-symbola
 tuir
+ueberzug
 unzip
 urlscan
 vifm
@@ -128,6 +132,7 @@ which
 xdo
 xdotool
 xf86-video-vesa
+xmenu
 xorg-bdftopcf
 xorg-docs
 xorg-font-util

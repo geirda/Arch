@@ -29,14 +29,14 @@ bind-key U show-urls
 bind-key x pb-delete
 
 color listnormal color105 default
-color listfocus color235 color149 standout 
+color listfocus color24 color231 standout 
 color listnormal_unread color111 default bold
-color listfocus_unread color235 color149 standout bold
+color listfocus_unread color24 color231 standout bold
 color info color178 color236 bold
 color article color247 default
 
-highlight article "(^Feed:.*)" color68 default
-highlight article "(^Author:.*)" cyan default
+highlight article "(^Feed:.*)" blue default
+highlight article "(^Author:.*)" color138 default
 highlight article "^(Title):.*$" green default bold
 highlight article "(^Date:.*)" white default
 highlight article "(^Link:)" green default
@@ -45,6 +45,6 @@ highlight article "https?://[^ ]+" color167 default
 highlight article "\\[[0-9][0-9]*\\]" magenta default bold
 highlight article "\\[image\\ [0-9]+\\]" cyan default bold
 highlight article "\\[embedded flash: [0-9][0-9]*\\]" green default bold
-highlight article ":.*\\(link\\)$" color138 default
-highlight article ":.*\\(image\\)$" blue default
+highlight article ":.*\\(link\\)$" color140 default
+highlight article ":.*\\(image\\)$" color68 default
 highlight article ":.*\\(embedded flash\\)$" magenta default

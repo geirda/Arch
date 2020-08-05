@@ -1,4 +1,6 @@
 #!/bin/sh
+# This script requires a patched nerd font for the icons
+
 HOUR=$(date '+%l' | awk '{ print $1 }')
 case "$HOUR" in
 1)

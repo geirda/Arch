@@ -1,4 +1,5 @@
 #!/bin/sh
+# This script requires a patched nerd font for the weather icons
 
 STI="$HOME/.cache/yr"
 

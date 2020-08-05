@@ -6,7 +6,6 @@ set smtp_url = "smtp://user@email.com@smtp.email.com:587"
 set smtp_pass = $my_pass
 set imap_pass = $my_pass
 
-set ssl_use_sslv3 = yes
 set ssl_force_tls = yes
 set ssl_starttls = yes
 

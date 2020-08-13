@@ -56,7 +56,8 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 " Misc settings
 set nobackup
-set number
+set fileencoding=utf-8
+set relativenumber
 set mousehide
 set laststatus=2
 set splitbelow splitright
@@ -77,6 +78,14 @@ let g:qs_highlight_on_keys = ['f', 'F']
 hi QuickScopePrimary cterm=underline ctermfg=155
 hi QuickScopeSecondary cterm=underline ctermfg=81
 
+" Easy motion
+let g:EasyMotion_smartcase = 1
+map <leader><leader>. <Plug>(easymotion-repeat)
+map <leader><leader>f <Plug>(easymotion-bd-f)
+map <leader><leader>j <Plug>(easymotion-bd-jk)
+map <leader><leader>k <Plug>(easymotion-bd-jk)
+map <leader><leader>w <Plug>(easymotion-bd-w)
+
 " NerdTree
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeMinimalUI = 1
@@ -94,9 +103,9 @@ let g:airline_theme='base16_default'
 " Colors
 colo kuhler
 hi LineNr ctermfg=242 guifg=#6c6c6c
-hi CursorColumn ctermbg=234 cterm=bold guibg=#1c1c1c
-hi CursorLine ctermbg=234 cterm=bold guibg=#1c1c1c
-hi CursorLineNr ctermfg=248 ctermbg=234 cterm=bold guifg=#a8a8a8 guibg=#1c1c1c
+hi CursorColumn ctermbg=233 cterm=bold guibg=#1c1c1c
+hi CursorLine ctermbg=233 cterm=bold guibg=#1c1c1c
+hi CursorLineNr ctermbg=233 ctermfg=248 cterm=bold guibg=#1c1c1c guifg=#a8a8a8
 hi StatusLine cterm=bold ctermbg=235 ctermfg=246 guibg=#262626 guifg=#949494
 hi VertSplit cterm=bold ctermbg=235 ctermfg=238 guibg=#262626 guifg=#444444
 hi WildMenu term=standout cterm=bold ctermbg=Green ctermfg=Black guibg=#a1b56c guifg=Black

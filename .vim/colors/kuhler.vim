@@ -2,7 +2,6 @@
 " vim: tw=0 ts=4 sw=4
 " Vim color file
 " Original:	Koehler, by Ron Aaron <ron@ronware.org>
-" Last Change:	2016 Sep 04
 " Modified by Geir Damstuen
 
 hi clear
@@ -18,7 +17,7 @@ hi SpecialKey	  term=bold  cterm=bold  ctermfg=darkred  guifg=#cc0000
 hi NonText	  term=bold  cterm=bold  ctermfg=darkred  gui=bold      guifg=#d75f5f
 hi Directory	  term=bold  cterm=bold  ctermfg=brown  guifg=#cc8000
 hi ErrorMsg	  term=standout  cterm=bold  ctermfg=grey  ctermbg=red  guibg=#d75f5f guifg=#2a2a2a
-hi Search	  term=reverse  ctermfg=white  ctermbg=red      guifg=white  guibg=#af0000
+hi Search	  term=reverse  ctermfg=white  ctermbg=red      guifg=white  guibg=#af5533
 hi MoreMsg	  term=bold  cterm=bold  ctermfg=darkgreen	gui=bold  guifg=SeaGreen
 hi ModeMsg	  term=bold  cterm=bold  gui=bold
 hi LineNr	  term=underline  ctermfg=242 guifg=#6c6c6c
@@ -27,20 +26,20 @@ hi StatusLine	  term=bold,reverse  cterm=bold ctermbg=235 ctermfg=246 guibg=#262
 hi StatusLineNC   term=reverse	ctermfg=white ctermbg=lightblue guifg=white guibg=blue
 hi Title	  term=bold  cterm=bold  ctermfg=darkmagenta  gui=bold	guifg=Magenta
 hi Visual	  term=reverse	cterm=reverse  gui=reverse
-hi WarningMsg	  term=standout  cterm=bold  ctermfg=darkred guifg=Red
+hi WarningMsg	  term=standout  cterm=bold  ctermfg=white guifg=#f0f0f0
 hi Cursor	  guifg=bg	guibg=Green
 hi Comment	  term=bold  cterm=bold ctermfg=cyan  guifg=#80a0ff
 hi Constant	  term=underline  cterm=bold ctermfg=magenta  guifg=#ffa0a0
-hi Special	  term=bold  cterm=bold ctermfg=red  guifg=Orange
+hi Special	  term=bold  cterm=bold ctermfg=208  ctermbg=233 guifg=#ff8700 guibg=#121212
 hi Identifier	  term=underline   ctermfg=brown  guifg=#d75f5f
 hi Statement	  term=bold  cterm=bold ctermfg=yellow	gui=bold  guifg=#ffff60
 hi PreProc	  term=underline  ctermfg=darkmagenta   guifg=#ff80ff
 hi Type		  term=underline  cterm=bold ctermfg=lightgreen  gui=bold  guifg=#60ff60
-hi Error	  term=reverse	ctermfg=darkcyan  ctermbg=black  guifg=#ff5f5f
+hi Error	  term=reverse	ctermfg=darkcyan  ctermbg=black  guifg=#ff5f5f guibg=#121232
 hi Todo		  term=standout  ctermfg=black	ctermbg=darkcyan  guifg=Blue  guibg=Yellow
-hi CursorLine	  term=underline  ctermbg=234 cterm=bold guibg=#1c1c1c
-hi CursorLineNr	  term=underline  cterm=bold ctermfg=248 ctermbg=234 guifg=#a8a8a8 guibg=#1c1c1c
-hi CursorColumn	  term=underline  ctermbg=234 cterm=bold guibg=#1c1c1c
+hi CursorLine	  term=underline  ctermbg=233 cterm=bold guibg=#1c1c1c
+hi CursorLineNr	  term=underline  cterm=bold ctermbg=233 ctermfg=248 guibg=#1c1c1c guifg=#a8a8a8
+hi CursorColumn	  term=underline  ctermbg=233 cterm=bold guibg=#1c1c1c
 hi MatchParen	  term=reverse  ctermfg=blue guibg=Blue
 hi VertSplit      cterm=bold ctermbg=235 ctermfg=238 guibg=#262626 guifg=#444444
 hi WildMenu       term=standout cterm=bold ctermbg=Green ctermfg=Black guibg=#a1b56c guifg=Black

@@ -1,34 +1,33 @@
 [colors]
-foreground = #a7a7a7
-background = #1c2023
-color0 = #1c2023
-color1 = #a54242
-color2 = #8c9440
-color3 = #de935f
-color4 = #5f819d
-color5 = #85678f
-color6 = #5e8d87
-color7 = #c5c8c6
-color8 = #3c4043
-color9 = #cc6666
-color10 = #b5bd68
-color11 = #f0c674
-color12 = #81a2be
-color13 = #b294bb
-color14 = #8abeb7
-color15 = #e1e1e1
+iconforeground = #a7a7a7
+iconbackground = #4a4446
+iconempty = #707070
+underline = #acc07f
+windowtitle = #d0c8b8
+
+foreground = #2a2426
+background = #2a2426
+color0  = #e48083
+color1  = #e39a7b
+color2  = #d8bb7f
+color3  = #a6c07f
+color4  = #85c092
+color5  = #88bfb9
+color6  = #4a4446
 
 [bar/top]
 width = 100%
-height = 19
+height = 17
 offset-x = 0
 offset-y = 0
+border-size = 2
+border-color = ${colors.background}
 
 background = ${colors.background}
-foreground = ${colors.foreground}
+foreground = ${colors.iconforeground}
 
 underline-size = 1
-underline-color = ${colors.color4}
+underline-color = ${colors.underline}
 
 spacing = 1
 padding-left = 0
@@ -36,13 +35,13 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = UbuntuMono:size=11;2
+font-0 = UbuntuMono:size=10;2
 font-1 = Hack:size=11;2
 font-2 = UbuntuMono Nerd font:size=11;2
 
-modules-left = bspwm xwindow
+modules-left = klikkmeny skille bspwm xwindow
 modules-center =
-modules-right = pad0 pad1 pad2 ramuse pad3 pad4 diskuse pad5 pad6 ip pad7 pad8 date
+modules-right = skille updates skille ramuse skille ip skille gpu skille sensors skille date skille
 
 wm-restack = bspwm
 
@@ -56,20 +55,20 @@ type = internal/bspwm
 
 ws-icon-0 = term;
 ws-icon-1 = web;
-ws-icon-2 = chat;
-ws-icon-3 = code;
-ws-icon-4 = music;
-ws-icon-5 = VI;
-ws-icon-6 = VII;
-ws-icon-7 = VIII;
+ws-icon-2 = vbox;
+ws-icon-3 = files;
+ws-icon-4 = img;
+ws-icon-5 = music;
+ws-icon-6 = chat;
+ws-icon-7 = VIII;
 ws-icon-default = []
 
 format = <label-state> <label-mode>
 
 label-focused = %icon%
-label-focused-background = ${colors.color8}
-label-focused-foreground = ${colors.color15}
-label-focused-underline = ${colors.color4}
+label-focused-background = ${colors.iconbackground}
+label-focused-foreground = ${colors.windowtitle}
+label-focused-underline = ${colors.underline}
 label-focused-padding = 1
 
 label-occupied = %icon%
@@ -79,105 +78,94 @@ label-urgent = %icon%
 label-urgent-padding = 1
 
 label-empty = %icon%
-label-empty-foreground = #44ffffff
+label-empty-foreground = ${colors.iconempty}
 label-empty-padding = 1
+
+[module/klikkmeny]
+type = custom/script
+label = %output%
+label-padding = 2
+interval = 10
+format-foreground = ${colors.color0}
+exec = echo ""
+click-left = "rootmenu.sh"
 
 [module/xwindow]
 type = internal/xwindow
+format-foreground = ${colors.windowtitle}
 label = %title:0:120:...%
+label-maxlen = 75
 label-padding = 4
+
+[module/updates]
+type = custom/script
+exec = echo "Updates: $(($(apt list --upgradeable 2>/dev/null|wc -l) - 1))"
+label-padding = 1
+format = <label>
+interval = 5.0
+format-foreground = ${colors.foreground}
+label-background = ${colors.color0}
+label-underline = ${colors.background}
+format-padding = 0
 
 [module/ramuse]
 type = custom/script
-exec = echo "RAM use: $(free -m | awk '/Mem/{ print $3 }')MB"
+exec = echo "RAM: $(free -h | awk '/Mem/{ print $3 }') Swap: $(free -h | awk '/Swap/{ print $3 }')"
 label-padding = 1
 format = <label>
 interval = 5.0
-format-foreground = ${colors.color15}
-label-background = ${colors.color2}
-format-padding = 0
-
-[module/diskuse]
-type = custom/script
-exec = echo "Free space: $(df -h | awk '/sda1/{ print $4 }')B"
-label-padding = 1
-format = <label>
-interval = 5.0
-format-foreground = ${colors.color15}
-label-background = ${colors.color6}
+format-foreground = ${colors.foreground}
+label-background = ${colors.color1}
+label-underline = ${colors.background}
 format-padding = 0
 
 [module/ip]
 type = custom/script
-exec = echo "IP: $(ip addr | awk '/ global /{ print $2 }')"
+exec = echo "IP: $(wget ipinfo.io/ip -qO -)"
 label-padding = 1
 format = <label>
-format-foreground = ${colors.color15}
-label-background = ${colors.color5}
+interval = 600.0
+format-foreground = ${colors.foreground}
+label-background = ${colors.color2}
+label-underline = ${colors.background}
+format-padding = 0
+
+[module/gpu]
+type = custom/script
+exec = echo "GPU: $(sensors|awk '/temp1/{ print $2 }')"
+label-padding = 1
+format = <label>
+format-foreground = ${colors.foreground}
+label-background = ${colors.color3}
+label-underline = ${colors.background}
+format-padding = 0
+
+[module/sensors]
+type = custom/script
+exec = echo "CPU: $(sensors | awk '/CPU T/{ print $3 }') $(sensors | awk '/CPU F/{ print $4 } ') RPM"
+label-padding = 1
+format = <label>
+format-foreground = ${colors.foreground}
+label-background = ${colors.color4}
+label-underline = ${colors.background}
 format-padding = 0
 
 [module/date]
 type = internal/date
 interval = 1.0
-date = %a %d. %b 
+date = %a %d %b 
 time = %H:%M
 label = %date% %time%
 label-padding = 1
 format = <label>
-format-foreground = ${colors.color15}
-label-background = ${colors.color4}
+format-foreground = ${colors.foreground}
+label-background = ${colors.color5}
+label-underline = ${colors.background}
 format-padding = 0
 
-[module/pad0]
+[module/skille]
 type = custom/text
-content = ""
+content = "|"
 content-background = ${colors.background}
-content-foreground = ${colors.color8}
-
-[module/pad1]
-type = custom/text
-content = ""
-content-background = ${colors.color8}
-content-foreground = ${colors.color10}
-
-[module/pad2]
-type = custom/text
-content = ""
-content-background = ${colors.color10}
-content-foreground = ${colors.color2}
-
-[module/pad3]
-type = custom/text
-content = ""
-content-background = ${colors.color2}
-content-foreground = ${colors.color14}
-
-[module/pad4]
-type = custom/text
-content = ""
-content-background = ${colors.color14}
 content-foreground = ${colors.color6}
 
-[module/pad5]
-type = custom/text
-content = ""
-content-background = ${colors.color6}
-content-foreground = ${colors.color13}
-
-[module/pad6]
-type = custom/text
-content = ""
-content-background = ${colors.color13}
-content-foreground = ${colors.color5}
-
-[module/pad7]
-type = custom/text
-content = ""
-content-background = ${colors.color5}
-content-foreground = ${colors.color12}
-
-[module/pad8]
-type = custom/text
-content = ""
-content-background = ${colors.color12}
-content-foreground = ${colors.color4}

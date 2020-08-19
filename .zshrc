@@ -130,6 +130,7 @@ alias l='ls'
 alias la='ls -a'
 alias ll='ls -l'
 alias ls='exa --group-directories-first'
+alias l.='exa -a | egrep "^\."'
 alias ..='cd ..'
 alias rm='rm -i'
 alias mv='mv -i'
@@ -190,3 +191,9 @@ alacritty*)
 esac
 
 source /home/geir/.config/broot/launcher/bash/br
+
+case "$TTY" in
+/dev/tty1)
+	startx
+	;;
+esac

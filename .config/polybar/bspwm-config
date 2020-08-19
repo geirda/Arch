@@ -99,7 +99,8 @@ label-padding = 4
 
 [module/updates]
 type = custom/script
-exec = echo "Updates: $(($(apt list --upgradeable 2>/dev/null|wc -l) - 1))"
+exec = echo "Updates: $(pacman -Qu|wc -l)"
+;exec = echo "Updates: $(($(apt list --upgradeable 2>/dev/null|wc -l) - 1))"
 label-padding = 1
 format = <label>
 interval = 5.0

@@ -1,12 +1,14 @@
 # required for xfce settings to work
 #xfsettingsd &
 
+# start compositor
+picom -b &
+
 # start the panel
-#tint2 &
 polybar openbox-bar
 
 # load wallpaper
 nitrogen --restore &
 
 # start dropdown terminal
-tilda -h -g $HOME/.config/tilda/config_0 &
+guake &

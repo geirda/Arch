@@ -42,9 +42,6 @@ hyper + k
 hyper + m
  browser.sh https://maps.google.com
 
-hyper + t
- browser.sh https://translate.google.com
-
 hyper + y
  browser.sh https://www.youtube.com
 
@@ -53,6 +50,15 @@ hyper + w
 
 hyper + a
  SOK=$(rofi -dmenu -width 30 -l 0 -p "   Arch Wiki"); [ -z $SOK ] || browser.sh "https://wiki.archlinux.org/?search=$SOK"
+
+hyper + c
+ SOK=$(rofi -dmenu -width 30 -l 0 -p "   Dict.cc"); [ -z $SOK ] || browser.sh "https://www.dict.cc/?s=$SOK"
+
+hyper + l
+ SOK=$(rofi -dmenu -width 30 -l 0 -p "   Latin wiktionary"); [ -z $SOK ] || browser.sh "https://la.wiktionary.org/wiki/$SOK"
+
+hyper + t
+ SOK=$(rofi -dmenu -width 30 -l 0 -p "   Google Translate"); [ -z $SOK ] || browser.sh "https://translate.google.com/#view=home&op=translate&sl=auto&tl=en&text=$SOK"
 
 hyper + x
  SOK=$(rofi -dmenu -width 30 -l 0 -p "   Telefonterror"); [ -z $SOK ] || browser.sh "https://www.telefonterror.co.no/nummer/$SOK"

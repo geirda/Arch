@@ -28,6 +28,8 @@ Tastatursnarveier:
 	fn  +  f3: søk duckduckgo
 	hyper + w: søk wikipedia
 	hyper + a: søk arch wiki
+	hyper + c: søk dict.cc
+	hyper + l: søk latin wiktionary
 	hyper + x: søk telefonterror
 	hyper + u: søk urban dictionary
 
@@ -37,4 +39,4 @@ Tastatursnarveier:
 	hyper + 4: github (Luke Smith)
 	hyper + 5: gitlab (OTB)
 	hyper + 6: github (Brodie Robertson)
-.
+ 

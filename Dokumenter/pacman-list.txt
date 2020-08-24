@@ -6,6 +6,7 @@ atool
 autoconf
 automake
 base
+bat
 bind
 binutils
 bison
@@ -33,6 +34,7 @@ firefox
 firefox-i18n-nb-no
 flex
 fortune-mod
+fortune-mod-fr
 galculator
 gawk
 gcc
@@ -52,6 +54,7 @@ intel-ucode
 keepassxc
 kvantum-qt5
 lf
+lhasa
 libmpcdec
 libreoffice-fresh
 libtool
@@ -61,7 +64,9 @@ linux-lts
 lxappearance
 m4
 make
+man-pages
 mariadb-clients
+matcha-gtk-theme
 mediainfo
 moc-pulse
 mpv
@@ -83,6 +88,7 @@ numlockx
 odt2txt
 opendoas
 openssh
+p7zip
 pacman
 pacman-contrib
 paper-icon-theme
@@ -97,6 +103,7 @@ pulseaudio-alsa
 pulsemixer
 qt5ct
 ranger
+readability-cli
 rofi
 rsync
 scrot
@@ -108,6 +115,7 @@ sxiv
 sysstat
 taglib
 texinfo
+ttf-dejavu
 ttf-font-awesome
 ttf-hack
 ttf-jetbrains-mono
@@ -116,11 +124,14 @@ ttf-roboto-mono
 ttf-symbola
 tuir
 ueberzug
+unrar
 unzip
 urlscan
 vifm
 vim-airline
+vim-commentary
 vim-devicons
+vim-easymotion
 vim-nerdtree
 vimix-gtk-themes
 virtualbox
@@ -129,6 +140,7 @@ wavpack
 weechat
 wget
 which
+xclip
 xdo
 xdotool
 xf86-video-vesa

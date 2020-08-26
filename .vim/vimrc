@@ -74,6 +74,10 @@ else
   set termguicolors
 endif
 
+" Set normal number or relativenumber
+nmap <F2> :set nornu<CR>
+nmap <F3> :set number relativenumber<CR>
+
 " Quick-scope
 let g:qs_highlight_on_keys = ['f', 'F']
 hi QuickScopePrimary cterm=underline ctermfg=155

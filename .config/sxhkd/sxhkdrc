@@ -1,6 +1,6 @@
 # Misc launchers
 hyper + h
- rofi -width 22 -location 2 -e "$(cat $HOME/Dokumenter/keybindings.txt)"
+ gxmessage -fn "Hack 12" -center -title "Tastatursnarveier" -file $HOME/Dokumenter/keybindings.txt
 
 hyper + Return
  alacritty
@@ -30,7 +30,10 @@ hyper + v
  rofi -width 25 -e "$($HOME/.local/bin/vær.sh)"
 
 Print
- scrot
+ dmenu-scrot.sh
+
+ctrl + Escape
+ progmenu.sh
 
 # Firefox quick launchers
 super + w

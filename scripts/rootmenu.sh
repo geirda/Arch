@@ -1,10 +1,10 @@
 #!/bin/sh
-ICONPATH=/usr/share/icons/Paper/16x16
+ICONPATH=/usr/share/icons/Paper/24x24
 
 cat <<EOF | xmenu | sh &
 IMG:$ICONPATH/apps/nautilus.png			File manager (PCManFM)		pcmanfm
 
-IMG:$ICONPATH/apps/firefox.png			Web browser (firefox)		firefox
+IMG:$ICONPATH/apps/firefox.png			Web browser (firefox)		ffoxrun.sh
 IMG:$ICONPATH/apps/brave.png			Web browser (brave)		brave
 IMG:$ICONPATH/apps/libreoffice-writer.png	Word processor (lowriter)	lowriter
 IMG:$ICONPATH/apps/gimp.png			Image manipulation (gimp)	gimp

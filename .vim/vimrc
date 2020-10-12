@@ -83,6 +83,12 @@ let g:qs_highlight_on_keys = ['f', 'F']
 hi QuickScopePrimary cterm=underline ctermfg=155
 hi QuickScopeSecondary cterm=underline ctermfg=81
 
+" Switching windows
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
+noremap <C-h> <C-w>h
+
 " Easy motion
 let g:EasyMotion_smartcase = 1
 map <leader><leader>. <Plug>(easymotion-repeat)

@@ -6,7 +6,7 @@ if [ -f "$userresources" ]; then
     xrdb -merge "$userresources"
 fi
 
-setxkbmap no
+setxkbmap -layout no -option "compose:menu"
 numlockx
 xsetroot -cursor_name left_ptr
 xinput --set-prop 'Logitech USB-PS/2 Optical Mouse' 'libinput Accel Speed' 1

@@ -8,7 +8,7 @@ arch=('i686' 'x86_64')
 license=('MIT')
 depends=('libx11' 'libxinerama' 'libxft' 'freetype2')
 source=("https://github.com/geirda/Arch/raw/master/suckless/dmenu/dmenu.tar.xz")
-md5sums=('fec3a032b506aa5ddffda1b6000f2319')
+md5sums=('116cfda0a3c33250ed72d1ed9567a88b')
 
 prepare() {
 	cd "$srcdir/$pkgname"

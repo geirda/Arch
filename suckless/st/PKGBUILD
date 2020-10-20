@@ -1,0 +1,25 @@
+# Maintainer: Geir Damstuen
+pkgname="st"
+pkgver=0.8.4
+pkgrel=1
+pkgdesc="A dynamic window manager for X"
+url="https://dwm.suckless.org"
+arch=('i686' 'x86_64')
+license=('MIT')
+depends=('libx11' 'libxft' 'freetype2')
+source=("https://github.com/geirda/Arch/raw/master/suckless/st/st-0.8.4.tar.xz")
+md5sums=('864b3388cca986e2cb857f448e7ecb89')
+
+prepare() {
+	cd "$srcdir/$pkgname-$pkgver"
+}
+
+build() {
+	cd "$srcdir/$pkgname-$pkgver"
+	make
+}
+
+package() {
+	cd "$srcdir/$pkgname-$pkgver"
+	make DESTDIR="$pkgdir" install
+}

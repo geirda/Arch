@@ -1,0 +1,25 @@
+# Maintainer: Geir Damstuen
+pkgname="dmenu"
+pkgver=4.9
+pkgrel=1
+pkgdesc="A generic menu for X"
+url="https://tools.suckless.org/dmenu"
+arch=('i686' 'x86_64')
+license=('MIT')
+depends=('libx11' 'libxinerama' 'libxft' 'freetype2')
+source=("https://github.com/geirda/Arch/raw/master/suckless/dmenu/dmenu.tar.xz")
+md5sums=('fec3a032b506aa5ddffda1b6000f2319')
+
+prepare() {
+	cd "$srcdir/$pkgname"
+}
+
+build() {
+	cd "$srcdir/$pkgname"
+	make
+}
+
+package() {
+	cd "$srcdir/$pkgname"
+	make DESTDIR="$pkgdir" install
+}

@@ -1,5 +1,3 @@
-# dwm 
-
 ## dwm 6.2
 
 This build of dwm uses the following two fonts:
@@ -36,6 +34,7 @@ The following patches are installed:
 #### Manually (and for other distros than Arch-based ones):
 
 	$ wget https://github.com/geirda/Arch/raw/master/suckless/dwm/dwm-geir.tar.xz
+	$ tar xvf dwm-geir.tar.xz
 	$ cd dwm-geir
 	$ make install
 

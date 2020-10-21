@@ -39,7 +39,7 @@ Install "Hack font" and "Roboto Mono Nerd Font". "Hack" is usually in your distr
 
 	$ sudo apt install fonts-hack-ttf
 
-Download RobotoMono Nerd Font from https://www.nerdfonts.com/font-downloads/ and extract it to somewhere in your font path, like $HOME/.local/share/fonts/ or $HOME/.fonts/
+Download RobotoMono Nerd Font from https://www.nerdfonts.com/font-downloads and extract it to somewhere in your font path, like $HOME/.local/share/fonts/ or $HOME/.fonts/
 
 Run the following commands to download and install dwm:
 

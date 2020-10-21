@@ -35,7 +35,7 @@ The following patches have been added:
 	$ cd st-geir
 	$ sudo make install
 
-Install "Hack font" or "Hack Nerd Font". "Hack" is usually in your distro's repo, on a Debian-based system do a:
+Install "Hack font" or "Hack Nerd Font". "Hack" is usually found in your distro's repo, on a Debian-based system do a:
 
 	$ sudo apt install fonts-hack-ttf
 

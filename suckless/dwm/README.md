@@ -5,9 +5,11 @@ This build of dwm uses the following two fonts:
 * extra/ttf-hack
 * aur/nerd-fonts-roboto-mono
 
-Please note that Roboto Mono Nerd Font must be installed manually.
+Please note that RobotoMono Nerd Font must be installed manually, e.g.:
 
-The following patches are installed:
+	$ yay -S nerd-fonts-roboto-mono
+
+The following patches have been added:
 
 * attachbelow
 * autostart
@@ -32,6 +34,14 @@ The following patches are installed:
 	$ sudo pacman -U dwm-geir-6.2-1-x86_64.pkg.tar.zst
 
 #### Manually (and for other distros than Arch-based ones):
+
+Install "Hack font" and "Roboto Mono Nerd Font". "Hack" is usually in your distro's repo, on a Debian-based system do a:
+
+	$ sudo apt install fonts-hack-ttf
+
+Download RobotoMono Nerd Font from https://www.nerdfonts.com/font-downloads/ and extract it to somewhere in your font path, like $HOME/.local/share/fonts/ or $HOME/.fonts/
+
+Run the following commands to download and install dwm:
 
 	$ wget https://github.com/geirda/Arch/raw/master/suckless/dwm/dwm-geir.tar.xz
 	$ tar xvf dwm-geir.tar.xz

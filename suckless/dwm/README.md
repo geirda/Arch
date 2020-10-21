@@ -35,8 +35,6 @@ The following patches have been added:
 
 ### Manually (and for other distros than Arch-based ones):
 
-Run the following commands to download and install dwm:
-
 	$ wget https://github.com/geirda/Arch/raw/master/suckless/dwm/dwm-geir.tar.xz
 	$ tar xvf dwm-geir.tar.xz
 	$ cd dwm-geir

@@ -18,15 +18,14 @@ The following patches have been added:
 
 ## Installation (choose one of the methods):
 
+### From precompiled binary:
+
+	$ sudo pacman -U https://github.com/geirda/Arch/raw/master/suckless/st/st-geir-0.8.4-1-x86_64.pkg.tar.zst
+
 ### From PKGBUILD:
 
 	$ wget https://raw.githubusercontent.com/geirda/Arch/master/suckless/st/PKGBUILD
 	$ makepkg -i
-
-### From precompiled binary:
-
-	$ wget https://github.com/geirda/Arch/raw/master/suckless/st/st-geir-0.8.4-1-x86_64.pkg.tar.zst
-	$ sudo pacman -U st-geir-0.8.4-1-x86_64.pkg.tar.zst
 
 ### Manually (and for other distros than Arch-based ones):
 

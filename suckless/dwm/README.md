@@ -1,6 +1,6 @@
 # dwm 
 
-dwm 6.2
+## dwm 6.2
 
 This build of dwm uses the following two fonts:
 
@@ -20,5 +20,23 @@ The following patches are installed:
 * swallow
 * switchtotag
 * titlecolor
+
+### Installation (choose one of the methods):
+
+#### From PKGBUILD:
+
+	$ wget https://raw.githubusercontent.com/geirda/Arch/master/suckless/dwm/PKGBUILD
+	$ makepkg -i
+
+#### From precompiled binary:
+
+	$ wget https://github.com/geirda/Arch/raw/master/suckless/dwm/dwm-geir-6.2-1-x86_64.pkg.tar.zst
+	$ sudo pacman -U dwm-geir-6.2-1-x86_64.pkg.tar.zst
+
+#### Manually (and for other distros than Arch-based ones):
+
+	$ wget https://github.com/geirda/Arch/raw/master/suckless/dwm/dwm-geir.tar.xz
+	$ cd dwm-geir
+	$ make install
 
 ![suckless](https://raw.githubusercontent.com/geirda/Arch/master/suckless/suckless.png)

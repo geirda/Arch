@@ -8,7 +8,7 @@ arch=('i686' 'x86_64')
 license=('MIT')
 depends=('libx11' 'libxft' 'freetype2' 'ttf-hack')
 source=("https://github.com/geirda/Arch/raw/master/suckless/st/st-geir.tar.xz")
-md5sums=('8f4820d585ede42505121f15af44f506')
+md5sums=('04d28f4f0eab73779e23d47150ca2b1c')
 
 prepare() {
 	cd "$srcdir/$pkgname"

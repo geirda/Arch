@@ -1,5 +1,5 @@
 # Maintainer: Geir Damstuen
-pkgname="dwm"
+pkgname="dwm-geir"
 pkgver=6.2
 pkgrel=1
 pkgdesc="A dynamic window manager for X"
@@ -7,8 +7,8 @@ url="https://dwm.suckless.org"
 arch=('i686' 'x86_64')
 license=('MIT')
 depends=('libx11' 'libxinerama' 'libxft' 'freetype2')
-source=("https://github.com/geirda/Arch/raw/master/suckless/dwm/dwm.tar.xz")
-md5sums=('4a8f5964faab3a3d397b2c3c09d8e1e8')
+source=("https://github.com/geirda/Arch/raw/master/suckless/dwm/dwm-geir.tar.xz")
+md5sums=('61cbbdc0309a8c8f8def3e72bd6ac46c')
 
 prepare() {
 	cd "$srcdir/$pkgname"

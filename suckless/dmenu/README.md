@@ -25,7 +25,7 @@ The following patch has been added:
 	$ wget https://github.com/geirda/Arch/raw/master/suckless/dmenu/dmenu-geir.tar.xz
 	$ tar xvf dmenu-geir.tar.xz
 	$ cd dmenu-geir
-	$ make install
+	$ sudo make install
 
 Install "Hack font". This font is usually found in your distro's repo, on a Debian-based system do a:
 

@@ -38,7 +38,7 @@ The following patches have been added:
 	$ wget https://github.com/geirda/Arch/raw/master/suckless/dwm/dwm-geir.tar.xz
 	$ tar xvf dwm-geir.tar.xz
 	$ cd dwm-geir
-	$ make install
+	$ sudo make install
 
 Install "Hack font" and "Roboto Mono Nerd Font". "Hack" is usually found in your distro's repo, on a Debian-based system do a:
 

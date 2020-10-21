@@ -1,4 +1,4 @@
-## dwm 6.2
+# dwm 6.2
 
 This build of dwm uses the following two fonts:
 
@@ -21,19 +21,19 @@ The following patches have been added:
 * switchtotag
 * titlecolor
 
-### Installation (choose one of the methods):
+## Installation (choose one of the methods):
 
-#### From PKGBUILD:
+### From PKGBUILD:
 
 	$ wget https://raw.githubusercontent.com/geirda/Arch/master/suckless/dwm/PKGBUILD
 	$ makepkg -i
 
-#### From precompiled binary:
+### From precompiled binary:
 
 	$ wget https://github.com/geirda/Arch/raw/master/suckless/dwm/dwm-geir-6.2-1-x86_64.pkg.tar.zst
 	$ sudo pacman -U dwm-geir-6.2-1-x86_64.pkg.tar.zst
 
-#### Manually (and for other distros than Arch-based ones):
+### Manually (and for other distros than Arch-based ones):
 
 Install "Hack font" and "Roboto Mono Nerd Font". "Hack" is usually in your distro's repo, on a Debian-based system do a:
 

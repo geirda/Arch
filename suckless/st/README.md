@@ -33,7 +33,7 @@ The following patches have been added:
 	$ wget https://github.com/geirda/Arch/raw/master/suckless/st/st-geir.tar.xz
 	$ tar xvf st-geir.tar.xz
 	$ cd st-geir
-	$ make install
+	$ sudo make install
 
 Install "Hack font" or "Hack Nerd Font". "Hack" is usually in your distro's repo, on a Debian-based system do a:
 

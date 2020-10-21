@@ -35,17 +35,17 @@ The following patches have been added:
 
 ### Manually (and for other distros than Arch-based ones):
 
-Install "Hack font" and "Roboto Mono Nerd Font". "Hack" is usually in your distro's repo, on a Debian-based system do a:
-
-	$ sudo apt install fonts-hack-ttf
-
-Download RobotoMono Nerd Font from https://www.nerdfonts.com/font-downloads and extract it to somewhere in your font path, like $HOME/.local/share/fonts/ or $HOME/.fonts/
-
 Run the following commands to download and install dwm:
 
 	$ wget https://github.com/geirda/Arch/raw/master/suckless/dwm/dwm-geir.tar.xz
 	$ tar xvf dwm-geir.tar.xz
 	$ cd dwm-geir
 	$ make install
+
+Install "Hack font" and "Roboto Mono Nerd Font". "Hack" is usually in your distro's repo, on a Debian-based system do a:
+
+	$ sudo apt install fonts-hack-ttf
+
+Download RobotoMono Nerd Font from https://www.nerdfonts.com/font-downloads and extract it to somewhere in your font path, like $HOME/.local/share/fonts/ or $HOME/.fonts/
 
 ![suckless](https://raw.githubusercontent.com/geirda/Arch/master/suckless/suckless.png)

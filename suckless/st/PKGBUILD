@@ -1,25 +1,25 @@
 # Maintainer: Geir Damstuen
-pkgname="st"
+pkgname="st-geir"
 pkgver=0.8.4
 pkgrel=1
 pkgdesc="A simple virtual terminal emulator for X"
 url="https://st.suckless.org"
 arch=('i686' 'x86_64')
 license=('MIT')
-depends=('libx11' 'libxft' 'freetype2')
-source=("https://github.com/geirda/Arch/raw/master/suckless/st/st-0.8.4.tar.xz")
-md5sums=('864b3388cca986e2cb857f448e7ecb89')
+depends=('libx11' 'libxft' 'freetype2' 'ttf-hack')
+source=("https://github.com/geirda/Arch/raw/master/suckless/st/st-geir.tar.xz")
+md5sums=('8f4820d585ede42505121f15af44f506')
 
 prepare() {
-	cd "$srcdir/$pkgname-$pkgver"
+	cd "$srcdir/$pkgname"
 }
 
 build() {
-	cd "$srcdir/$pkgname-$pkgver"
+	cd "$srcdir/$pkgname"
 	make
 }
 
 package() {
-	cd "$srcdir/$pkgname-$pkgver"
+	cd "$srcdir/$pkgname"
 	make DESTDIR="$pkgdir" install
 }

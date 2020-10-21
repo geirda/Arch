@@ -2,7 +2,7 @@
 
 st 0.8.4
 
-This build of dwm uses the following two fonts:
+This build of st uses the following two fonts:
 
 * aur/nerd-fonts-hack
 * extra/ttf-hack

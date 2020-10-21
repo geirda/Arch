@@ -17,6 +17,7 @@ The following patches are installed:
 * ru_gaps
 * status2d
 * statuspadding
+* swallow
 * switchtotag
 * titlecolor
 

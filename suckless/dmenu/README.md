@@ -12,7 +12,8 @@ The following patch has been added:
 
 ### From precompiled binary:
 
-	$ sudo pacman -U https://github.com/geirda/Arch/raw/master/suckless/dmenu/dmenu-geir-5.0-1-x86_64.pkg.tar.zst
+	$ wget https://github.com/geirda/Arch/raw/master/suckless/dmenu/dmenu-geir-5.0-1-x86_64.pkg.tar.zst
+	$ sudo pacman -U dmenu-geir-5.0-1-x86_64.pkg.tar.zst
 
 ### From PKGBUILD:
 

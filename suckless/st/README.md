@@ -1,19 +1,44 @@
-# st
-
-st 0.8.4
+# st 0.8.4
 
 This build of st uses the following two fonts:
 
 * aur/nerd-fonts-hack
 * extra/ttf-hack
 
-Please note that Hack Nerd Font must be installed manually. This is optional though, as st will use Hack Font as the fallback.
+Please note that Hack Nerd Font must be installed manually. This is optional though, as st will use Hack Font as the fallback. To install Hack Nerd Font:
 
-The following patches are installed:
+	$ yay -S nerd-fonts-hack
+
+The following patches have been added:
 
 * alphaFocusHighlight
 * scrollback
 * scrollback-mouse
 * scrollback-mouse-altscreen
+
+## Installation (choose one of the methods):
+
+### From PKGBUILD:
+
+	$ wget https://raw.githubusercontent.com/geirda/Arch/master/suckless/st/PKGBUILD
+	$ makepkg -i
+
+### From precompiled binary:
+
+	$ wget https://github.com/geirda/Arch/raw/master/suckless/st/st-geir-0.8.4-1-x86_64.pkg.tar.zst
+	$ sudo pacman -U st-geir-0.8.4-1-x86_64.pkg.tar.zst
+
+### Manually (and for other distros than Arch-based ones):
+
+	$ wget https://github.com/geirda/Arch/raw/master/suckless/st/st-geir.tar.xz
+	$ tar xvf st-geir.tar.xz
+	$ cd st-geir
+	$ make install
+
+Install "Hack font" or "Hack Nerd Font". "Hack" is usually in your distro's repo, on a Debian-based system do a:
+
+	$ sudo apt install fonts-hack-ttf
+
+Download Hack Nerd Font from https://www.nerdfonts.com/font-downloads and extract it to somewhere in your font path, like $HOME/.local/share/fonts/ or $HOME/.fonts/
 
 ![suckless](https://raw.githubusercontent.com/geirda/Arch/master/suckless/suckless.png)

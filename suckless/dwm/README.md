@@ -1,6 +1,8 @@
-# DWM
+# dwm 
 
-This version of dwm uses the following two fonts:
+dwm 6.2
+
+This build of dwm uses the following two fonts:
 
 * extra/ttf-hack
 * aur/nerd-fonts-roboto-mono

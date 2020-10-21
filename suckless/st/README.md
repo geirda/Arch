@@ -39,6 +39,6 @@ Install "Hack font" or "Hack Nerd Font". "Hack" is usually found in your distro'
 
 	$ sudo apt install fonts-hack-ttf
 
-Download Hack Nerd Font from https://www.nerdfonts.com/font-downloads and extract it to somewhere in your font path, like $HOME/.local/share/fonts/ or $HOME/.fonts/
+Optional: Download Hack Nerd Font from https://www.nerdfonts.com/font-downloads and extract it to somewhere in your font path, like $HOME/.local/share/fonts/ or $HOME/.fonts/
 
 ![suckless](https://raw.githubusercontent.com/geirda/Arch/master/suckless/suckless.png)

@@ -37,7 +37,7 @@ Please note that Hack Nerd Font must be installed manually. This is optional tho
 
 Install "Hack font". This font is usually found in your distro's repo, on a Debian-based system do a:
 
-	$ sudo apt install fonts-hack-ttf
+	$ sudo apt install fonts-hack
 
 Optional: Download Hack Nerd Font from https://www.nerdfonts.com/font-downloads and extract it to somewhere in your font path, like $HOME/.local/share/fonts/ or $HOME/.fonts/
 

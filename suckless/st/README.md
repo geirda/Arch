@@ -1,5 +1,12 @@
 # st 0.8.4
 
+The following patches have been added:
+
+* alphaFocusHighlight
+* scrollback
+* scrollback-mouse
+* scrollback-mouse-altscreen
+
 This build of st uses the following two fonts:
 
 * aur/nerd-fonts-hack
@@ -8,13 +15,6 @@ This build of st uses the following two fonts:
 Please note that Hack Nerd Font must be installed manually. This is optional though, as st will use Hack Font as the fallback. To install Hack Nerd Font:
 
 	$ yay -S nerd-fonts-hack
-
-The following patches have been added:
-
-* alphaFocusHighlight
-* scrollback
-* scrollback-mouse
-* scrollback-mouse-altscreen
 
 ## Installation (choose one of the methods):
 

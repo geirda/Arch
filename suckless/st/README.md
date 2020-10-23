@@ -35,7 +35,7 @@ Please note that Hack Nerd Font must be installed manually. This is optional tho
 	$ cd st-geir
 	$ sudo make install
 
-Install "Hack font" or "Hack Nerd Font". "Hack" is usually found in your distro's repo, on a Debian-based system do a:
+Install "Hack font". This font is usually found in your distro's repo, on a Debian-based system do a:
 
 	$ sudo apt install fonts-hack-ttf
 

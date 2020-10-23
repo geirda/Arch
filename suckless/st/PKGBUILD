@@ -7,6 +7,9 @@ url="https://st.suckless.org"
 arch=('i686' 'x86_64')
 license=('MIT')
 depends=('libx11' 'libxft' 'freetype2' 'ttf-hack')
+optdepends=(nerd-fonts-hack)
+provides=(st)
+conflicts=(st)
 source=("https://github.com/geirda/Arch/raw/master/suckless/st/st-geir.tar.xz")
 md5sums=('04d28f4f0eab73779e23d47150ca2b1c')
 

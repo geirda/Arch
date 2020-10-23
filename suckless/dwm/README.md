@@ -1,15 +1,6 @@
 # dwm 6.2
 
-This build of dwm uses the following two fonts:
-
-* extra/ttf-hack
-* aur/nerd-fonts-roboto-mono
-
-Please note that RobotoMono Nerd Font must be installed manually, e.g.:
-
-	$ yay -S nerd-fonts-roboto-mono
-
-The following patches have been added:
+Patches included:
 
 * attachbelow
 * autostart
@@ -20,6 +11,15 @@ The following patches have been added:
 * swallow
 * switchtotag
 * titlecolor
+
+This build of dwm uses the following two fonts:
+
+* extra/ttf-hack
+* aur/nerd-fonts-roboto-mono
+
+Please note that RobotoMono Nerd Font must be installed manually, e.g.:
+
+	$ yay -S nerd-fonts-roboto-mono
 
 ## Installation (choose one of the methods):
 
@@ -40,9 +40,9 @@ The following patches have been added:
 	$ cd dwm-geir
 	$ sudo make install
 
-Install "Hack font" and "Roboto Mono Nerd Font". "Hack" is usually found in your distro's repo, on a Debian-based system do a:
+Install "Hack font" and "RobotoMono Nerd Font". "Hack" is usually found in your distro's repo, on a Debian-based system do a:
 
-	$ sudo apt install fonts-hack-ttf
+	$ sudo apt install fonts-hack
 
 Download RobotoMono Nerd Font from https://www.nerdfonts.com/font-downloads and extract it to somewhere in your font path, like $HOME/.local/share/fonts/ or $HOME/.fonts/
 

@@ -1,6 +1,6 @@
 # st 0.8.4
 
-The following patches have been added:
+Patches included:
 
 * alphaFocusHighlight
 * scrollback

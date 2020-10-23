@@ -1,12 +1,12 @@
 # dmenu 5.0
 
+Patches included:
+
+* lineheight
+
 This build of dmenu uses the following font:
 
 * extra/ttf-hack
-
-The following patch has been added:
-
-* lineheight
 
 ## Installation (choose one of the methods):
 
@@ -29,6 +29,6 @@ The following patch has been added:
 
 Install "Hack font". This font is usually found in your distro's repo, on a Debian-based system do a:
 
-	$ sudo apt install fonts-hack-ttf
+	$ sudo apt install fonts-hack
 
 ![suckless](https://raw.githubusercontent.com/geirda/Arch/master/suckless/suckless.png)

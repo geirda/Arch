@@ -40,10 +40,10 @@ super + y
  bspc node -w last.manual
 
 super + c
- bspc node -s biggest
+ bspc node -s biggest.local
 
 super + {_,shift + }{j,k}
- bspc node -{f,s} {next,prev}.local
+ bspc node -{f,s} {next,prev}.local.!hidden.window
 
 super + {h,l}
  bspc node -z {right -20 0,right 20 0}
@@ -89,43 +89,50 @@ super + Return
  st
 
 hyper + Return
- tilix
+ alacritty
 
-alt + ctrl + t
- xfce4-terminal
+ctrl + Escape
+ progmenu.sh
 
 super + p
- dmenu_run -h 19 -p "dmenu:"
-# dmenu_run -fn "Hack:size=10" -nb "#1c2023" -nf "#d0d0d0" -sb "#df4a16" -p "dmenu:"
+ dmenu_run -h 21 -p "dmenu:"
 
 hyper + d
- dmenu_run -h 19 -p "dmenu:"
+ dmenu_run -h 21 -p "dmenu:"
 
-hyper + f
- thunar
-
-hyper + w
- vivaldi
-
-hyper + s
- firefox
+hyper + r
+ rofi -show combi
 
 super + x
  rofi -show combi
 
-#Volume Control
-#XF86AudioLowerVolume
-# amixer set Master 5%-
-#XF86AudioRaiseVolume
-# amixer set Master 5%+
-#XF86AudioMute
-#        amixer set Master toggle
+hyper + space
+ pcmanfm
 
-#Brightness control
-#XF86MonBrightnessDown
-# xbacklight -dec 5
-#XF86MonBrightnessUp
-# xbacklight -inc 5
+hyper + b
+ brave-browser
+
+hyper + f
+ firefox
+
+hyper + g
+ gimp
+
+XF86Calculator
+ galculator
+
+Print
+ dmenu-scrot.sh
+
+#Volume Control
+XF86AudioLowerVolume
+ amixer set Master 5%-
+
+XF86AudioRaiseVolume
+ amixer set Master 5%+
+
+XF86AudioMute
+ amixer set Master toggle
 
 # make sxhkd reload its configuration files:
 super + r

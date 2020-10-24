@@ -1,67 +1,171 @@
-;=====================================================
-; The system tray and other default values for bars
-; inheriting from master are enabled in master.conf
-;
-; modules.conf contains all the modules that can be
-; added to a bar (NOTE: some will require configuration)
+[colors]
+iconforeground = #a7a7a7
+iconbackground = #4a4446
+iconempty = #707070
+underline = #acc07f
+windowtitle = #d0c8b8
 
-[section/base]
-include-file = ~/.config/polybar/master.conf
-include-file = ~/.config/polybar/modules.conf
+foreground = #2a2426
+background = #2a2426
+color0  = #e48083
+color1  = #e39a7b
+color2  = #d8bb7f
+color3  = #a6c07f
+color4  = #85c092
+color5  = #88bfb9
+color6  = #4a4446
 
+[bar/top]
+width = 100%
+height = 17
+offset-x = 0
+offset-y = 0
+border-size = 2
+border-color = ${colors.background}
 
-;=====================================================
-; Openbox Bar
+background = ${colors.background}
+foreground = ${colors.iconforeground}
 
-[bar/openbox-bar]
-inherit = bar/master
+underline-size = 1
+underline-color = ${colors.underline}
 
-; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor =
+spacing = 1
+padding-left = 0
+padding-right = 0
+module-margin-left = 0
+module-margin-right = 0
 
-modules-left   = jgmenu workspaces
-modules-center = clock
-modules-right  = ${env:POLYBAR_MODULES:coreuse memory pkg net volume}
+font-0 = UbuntuMono:size=10;2
+font-1 = Hack:size=11;2
+font-2 = UbuntuMono Nerd font:size=11;2
 
+modules-left = klikkmeny skille bspwm xwindow
+modules-center =
+modules-right = skille updates skille ramuse skille ip skille gpu skille sensors skille date skille
 
-;=====================================================
-; i3 Bar
+wm-restack = bspwm
 
-[bar/i3-bar]
-inherit = bar/master
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
 
-; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor =
+; MODULES
 
-modules-left   = i3 menu
-modules-center = clock
-modules-right  = ${env:POLYBAR_MODULES:coreuse temperature memory pkg net volume}
+[module/bspwm]
+type = internal/bspwm
 
+ws-icon-0 = term;
+ws-icon-1 = web;
+ws-icon-2 = vbox;
+ws-icon-3 = files;
+ws-icon-4 = img;
+ws-icon-5 = music;
+ws-icon-6 = chat;
+ws-icon-7 = VIII;
+ws-icon-default = []
 
-;=====================================================
-; Bspwm Bars
+format = <label-state> <label-mode>
 
-[bar/bspwm-bar]
-inherit = bar/master
+label-focused = %icon%
+label-focused-background = ${colors.iconbackground}
+label-focused-foreground = ${colors.windowtitle}
+label-focused-underline = ${colors.underline}
+label-focused-padding = 1
 
-; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor =
+label-occupied = %icon%
+label-occupied-padding = 1
 
-modules-left   = bspwm menu
-modules-center = clock
-modules-right  = ${env:POLYBAR_MODULES:coreuse temperature memory pkg net volume}
+label-urgent = %icon%
+label-urgent-padding = 1
 
+label-empty = %icon%
+label-empty-foreground = ${colors.iconempty}
+label-empty-padding = 1
 
-;=====================================================
-; Generic Bars (used as fallback for unknown WM)
+[module/klikkmeny]
+type = custom/script
+label = %output%
+label-padding = 2
+interval = 10
+format-foreground = ${colors.color0}
+exec = echo ""
+click-left = "rootmenu.sh"
 
-[bar/generic-bar]
-inherit = bar/master
+[module/xwindow]
+type = internal/xwindow
+format-foreground = ${colors.windowtitle}
+label = %title:0:120:...%
+label-maxlen = 75
+label-padding = 4
 
-; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor =
+[module/updates]
+type = custom/script
+exec = echo "Updates: $(($(apt list --upgradeable 2>/dev/null|wc -l) - 1))"
+label-padding = 1
+format = <label>
+interval = 5.0
+format-foreground = ${colors.foreground}
+label-background = ${colors.color0}
+label-underline = ${colors.background}
+format-padding = 0
 
-modules-left   = workspaces menu
-modules-center = clock
-modules-right  = ${env:POLYBAR_MODULES:coreuse temperature memory pkg net volume}
+[module/ramuse]
+type = custom/script
+exec = echo "RAM: $(free -h | awk '/Mem/{ print $3 }') Swap: $(free -h | awk '/Swap/{ print $3 }')"
+label-padding = 1
+format = <label>
+interval = 5.0
+format-foreground = ${colors.foreground}
+label-background = ${colors.color1}
+label-underline = ${colors.background}
+format-padding = 0
+
+[module/ip]
+type = custom/script
+exec = echo "IP: $(wget ipinfo.io/ip -qO -)"
+label-padding = 1
+format = <label>
+interval = 600.0
+format-foreground = ${colors.foreground}
+label-background = ${colors.color2}
+label-underline = ${colors.background}
+format-padding = 0
+
+[module/gpu]
+type = custom/script
+exec = echo "GPU: $(sensors|awk '/temp1/{ print $2 }')"
+label-padding = 1
+format = <label>
+format-foreground = ${colors.foreground}
+label-background = ${colors.color3}
+label-underline = ${colors.background}
+format-padding = 0
+
+[module/sensors]
+type = custom/script
+exec = echo "CPU: $(sensors | awk '/CPU T/{ print $3 }') $(sensors | awk '/CPU F/{ print $4 } ') RPM"
+label-padding = 1
+format = <label>
+format-foreground = ${colors.foreground}
+label-background = ${colors.color4}
+label-underline = ${colors.background}
+format-padding = 0
+
+[module/date]
+type = internal/date
+interval = 1.0
+date = %a %d %b 
+time = %H:%M
+label = %date% %time%
+label-padding = 1
+format = <label>
+format-foreground = ${colors.foreground}
+label-background = ${colors.color5}
+label-underline = ${colors.background}
+format-padding = 0
+
+[module/skille]
+type = custom/text
+content = "|"
+content-background = ${colors.background}
+content-foreground = ${colors.color6}
 

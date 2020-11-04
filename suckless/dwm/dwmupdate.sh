@@ -1,5 +1,5 @@
 #!/bin/sh
-echo "Update script for dwm-geir\n"
+/usr/bin/echo -en "Update script for dwm-geir\n\n"
 wget -q https://raw.githubusercontent.com/geirda/Arch/master/suckless/dwm/README.md -O /tmp/dwm-geir
 
 NYESTE=$(grep pacman /tmp/dwm-geir | cut -f5- -d " "| cut -f3-4 -d "-")

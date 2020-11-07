@@ -27,10 +27,10 @@ xkb_symbols "basic" {
 
     key <BKSL>	{ [apostrophe,   asterisk, dead_doubleacute, multiply ]	};
     key <LSGT>	{ [      less,    greater,      onehalf, threequarters]	};
+
     key <CAPS>  { [ Hyper_L					      ]	};
 
     modifier_map Mod3   { Hyper_L, Hyper_R };
-    key <HYPR> {	[ NoSymbol, Hyper_L	]	};
     modifier_map Mod3   { <HYPR> };
 
     include "nbsp(level3n)"

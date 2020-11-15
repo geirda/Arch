@@ -159,11 +159,11 @@ def init_keys():
                 lazy.layout.toggle_split()              # Toggle between split and unsplit sides of stack
                 ),
 
-	    ### Rofi Run Launcher
-	    Key(
-		[mod], "x",
-		lazy.spawn("rofi -show combi")
-		),
+            ### Rofi Run Launcher
+            Key(
+                [mod], "x",
+                lazy.spawn("rofi -show combi")
+                ),
             ### Dmenu Run Launcher
             Key(
 		[mod], "p",

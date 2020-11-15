@@ -252,9 +252,9 @@ def init_border_args():
     return {"border_width": 2}
 
 def init_layouts():
-    return [layout.Max(**layout_theme),
-            layout.MonadTall(**layout_theme),
+    return [layout.MonadTall(**layout_theme),
             layout.MonadWide(**layout_theme),
+            layout.Max(**layout_theme),
             layout.Bsp(**layout_theme),
             layout.TreeTab(
                 font = "Ubuntu",
@@ -301,7 +301,7 @@ def init_widgets_list():
                         background = colors[0]
                         ),
                widget.GroupBox(font="Ubuntu Bold",
-                        fontsize = 22,
+                        fontsize = 20,
                         margin_y = 4,
                         margin_x = 0,
                         padding_y = 5,

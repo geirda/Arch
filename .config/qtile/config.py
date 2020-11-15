@@ -393,8 +393,8 @@ def init_widgets_list():
                         colour_no_updates = colors[7],
                         colour_have_updates = colors[7],
                         background = colors[0],
-			distro = "Arch",
-			custom_command = "pacman -Qu"
+                        distro = "Arch",
+                        custom_command = "pacman -Qu"
                         ),
                widget.TextBox(
                         font="Ubuntu Bold",
@@ -435,10 +435,10 @@ def init_widgets_list():
                         background=colors[0],
                         fontsize=14
                         ),
-	       widget.Memory(
-			foreground=colors[8],
-			background=colors[0]
-			),
+               widget.Memory(
+                        foreground=colors[8],
+                        background=colors[0]
+                        ),
                widget.TextBox(
                         font="Ubuntu Bold",
                         text="   |",

@@ -166,85 +166,38 @@ def init_keys():
 		),
             ### Dmenu Run Launcher
             Key(
-#                ["mod1", "control"], "Return",
 		[mod], "p",
-                lazy.spawn("dmenu_run -fn 'UbuntuMono Nerd Font:size=10' -nb '#292d3e' -nf '#bbc5ff' -sb '#82AAFF' -sf '#292d3e' -p 'dmenu:'")
+                lazy.spawn("dmenu_run -fn 'UbuntuMono Nerd Font:size=10' -h 20 -nb '#292d3e' -nf '#a7a7a7' -sb '#404354' -sf '#d8dee9' -p 'dmenu:'")
                 ),
 
-            ### Dmenu scripts launched with ALT + CTRL + KEY
+            ### My applications launched with HYPER + KEY
             Key(
-                ["mod1", "control"], "e",
-                lazy.spawn("./.dmenu/dmenu-edit-configs.sh")
+                ["mod3"], "space",
+                lazy.spawn("pcmanfm")
                 ),
             Key(
-                ["mod1", "control"], "m",
-                lazy.spawn("./.dmenu/dmenu-sysmon.sh")
-                ),
-            Key(
-                ["mod1", "control"], "p",
-                lazy.spawn("passmenu")
-                ),
-            Key(
-                ["mod1", "control"], "r",
-                lazy.spawn("./.dmenu/dmenu-reddio.sh")
-                ),
-            Key(
-                ["mod1", "control"], "s",
-                lazy.spawn("./.dmenu/dmenu-surfraw.sh")
-                ),
-            Key(
-                ["mod1", "control"], "t",
-                lazy.spawn("./.dmenu/dmenu-trading.sh")
-                ),
-
-            ### My applications launched with SUPER + ALT + KEY
-            Key(
-                [mod, "mod1"], "l",
-                lazy.spawn(myTerm+" -e lynx -cfg=~/.lynx/lynx.cfg -lss=~/.lynx/lynx.lss gopher://distro.tube")
-                ),
-            Key(
-                [mod, "mod1"], "n",
+                ["mod3"], "n",
                 lazy.spawn(myTerm+" -e newsboat")
                 ),
             Key(
-                [mod, "mod1"], "r",
-                lazy.spawn(myTerm+" -e rtv")
+                ["mod3"], "t",
+                lazy.spawn(myTerm+" -e tuir")
                 ),
             Key(
-                [mod, "mod1"], "e",
+                ["mod3"], "e",
                 lazy.spawn(myTerm+" -e neomutt")
                 ),
             Key(
-                [mod, "mod1"], "m",
-                lazy.spawn(myTerm+" -e sh ./scripts/toot.sh")
+                ["mod3"], "m",
+                lazy.spawn(myTerm+" -e mocp")
                 ),
             Key(
-                [mod, "mod1"], "t",
-                lazy.spawn(myTerm+" -e sh ./scripts/tig-script.sh")
+                ["mod3"], "w",
+                lazy.spawn(myTerm+" -e weechat")
                 ),
             Key(
-                [mod, "mod1"], "f",
-                lazy.spawn(myTerm+" -e sh ./.config/vifm/scripts/vifmrun")
-                ),
-            Key(
-                [mod, "mod1"], "j",
-                lazy.spawn(myTerm+" -e joplin")
-                ),
-            Key(
-                [mod, "mod1"], "c",
-                lazy.spawn(myTerm+" -e cmus")
-                ),
-            Key(
-                [mod, "mod1"], "i",
-                lazy.spawn(myTerm+" -e irssi")
-                ),
-            Key(
-                [mod, "mod1"], "y",
-                lazy.spawn(myTerm+" -e youtube-viewer")
-                ),
-            Key(
-                [mod, "mod1"], "a",
-                lazy.spawn(myTerm+" -e ncpamixer")
+                ["mod3"], "a",
+                lazy.spawn(myTerm+" -e pulsemixer")
                 ),
         ]
     return keys
@@ -267,18 +220,18 @@ def init_colors():
 ##### GROUPS #####
 
 def init_group_names():
-    return [("TERM", {'layout': 'monadtall'}),
-            ("WWW", {'layout': 'max'}),
-            ("SYS", {'layout': 'monadtall'}),
-            ("DOC", {'layout': 'monadtall'}),
-            ("VBOX", {'layout': 'floating'}),
-            ("CHAT", {'layout': 'bsp'}),
-            ("MEDIA", {'layout': 'monadtall'}),
-            ("GFX", {'layout': 'floating'})]
+    return [("TERM", {'label': '', 'layout': 'monadtall'}),
+            ("WWW", {'label': '', 'layout': 'max'}),
+            ("SYS", {'label': '', 'layout': 'monadtall'}),
+            ("DOC", {'label': '', 'layout': 'monadtall'}),
+            ("VBOX", {'label': '', 'layout': 'floating'}),
+            ("CHAT", {'label': '', 'layout': 'monadtall'}),
+            ("MAIL", {'label': '', 'layout': 'monadtall'}),
+            ("MEDIA", {'label': '', 'layout': 'monadtall'}),
+            ("GFX", {'label': '', 'layout': 'monadtall'})]
 
 def init_groups():
     return [Group(name, **kwargs) for name, kwargs in group_names]
-
 
 ##### LAYOUTS #####
 
@@ -287,7 +240,10 @@ def init_floating_layout():
 
 def init_layout_theme():
     return {"border_width": 2,
-            "margin": 5,
+            "single_border_width": 0,
+            "single_margin": 0,
+            "margin": 3,
+            "ratio": .517,
             "border_focus": "81A2BE",
             "border_normal": "1D2330"
            }
@@ -345,7 +301,7 @@ def init_widgets_list():
                         background = colors[0]
                         ),
                widget.GroupBox(font="Ubuntu Bold",
-                        fontsize = 9,
+                        fontsize = 22,
                         margin_y = 4,
                         margin_x = 0,
                         padding_y = 5,
@@ -417,12 +373,6 @@ def init_widgets_list():
                         update_interval=60,
                         func = lambda: subprocess.check_output("/home/geir/.local/bin/ip.sh").decode("utf-8").replace('\n', '')
                         ),
-               # widget.Net(
-               #         foreground = colors[6],
-               #         background = colors[0],
-               #         interface = "enp0s3",
-               #         padding = 5
-               #         ),
                widget.TextBox(
                         font="Ubuntu Bold",
                         text="  |",
@@ -519,20 +469,10 @@ def init_widgets_list():
               ]
     return widgets_list
 
-##### SCREENS ##### (TRIPLE MONITOR SETUP)
-
-#def init_widgets_screen1():
-#    widgets_screen1 = init_widgets_list()
-#    return widgets_screen1                       # Slicing removes unwanted widgets on Monitors 1,3
-
-#def init_widgets_screen2():
-#    widgets_screen2 = init_widgets_list()
-#    return widgets_screen2                       # Monitor 2 will display all widgets in widgets_list
+##### SCREENS #####
 
 def init_screens():
     return [Screen(top=bar.Bar(widgets=init_widgets_list(), opacity=0.95, size=20))]
-#            Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=0.95, size=20)),
-#            Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=0.95, size=20))]
 
 ##### FLOATING WINDOWS #####
 
@@ -568,15 +508,7 @@ if __name__ in ["config", "__main__"]:
     layouts = init_layouts()
     widget_defaults = init_widgets_defaults()
     widgets_list = init_widgets_list()
-#    screens = [
-#	Screen(top=bar.Bar([
-#	widget.Memory(),
-#	widget.Net()
-#	], 30))
-#    ]
     screens = init_screens()
-#    widgets_screen1 = init_widgets_screen1()
-#    widgets_screen2 = init_widgets_screen2()
 
 ##### SETS GROUPS KEYBINDINGS #####
 

@@ -223,7 +223,7 @@ def init_group_names():
     return [("TERM", {'label': '', 'layout': 'monadtall'}),
             ("WWW", {'label': '', 'layout': 'max'}),
             ("SYS", {'label': '', 'layout': 'monadtall'}),
-            ("DOC", {'label': '', 'layout': 'monadtall'}),
+            ("DOC", {'label': '', 'layout': 'monadtall'}),
             ("VBOX", {'label': '', 'layout': 'floating'}),
             ("CHAT", {'label': '', 'layout': 'monadtall'}),
             ("MAIL", {'label': '', 'layout': 'monadtall'}),

@@ -166,7 +166,7 @@ def init_keys():
                 ),
             ### Dmenu Run Launcher
             Key(
-		[mod], "p",
+                [mod], "p",
                 lazy.spawn("dmenu_run -fn 'UbuntuMono Nerd Font:size=10' -h 20 -nb '#292d3e' -nf '#a7a7a7' -sb '#404354' -sf '#d8dee9' -p 'dmenu:'")
                 ),
 

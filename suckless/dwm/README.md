@@ -4,6 +4,8 @@ Patches included:
 
 * attachbelow
 * autostart
+* gridmode
+* pertag
 * rotatestack
 * ru_gaps
 * status2d

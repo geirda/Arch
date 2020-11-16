@@ -25,8 +25,8 @@ Please note that RobotoMono Nerd Font must be installed manually, e.g.:
 
 ### From precompiled binary:
 
-	$ wget https://github.com/geirda/Arch/raw/master/suckless/dwm/dwm-geir-6.2-1-x86_64.pkg.tar.zst
-	$ sudo pacman -U dwm-geir-6.2-1-x86_64.pkg.tar.zst
+	$ wget https://github.com/geirda/Arch/raw/master/suckless/dwm/dwm-geir-6.2-2-x86_64.pkg.tar.zst
+	$ sudo pacman -U dwm-geir-6.2-2-x86_64.pkg.tar.zst
 
 ### From PKGBUILD:
 

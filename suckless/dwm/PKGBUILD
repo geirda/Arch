@@ -11,7 +11,7 @@ optdepends=(nerd-fonts-roboto-mono)
 provides=(dwm)
 conflicts=(dwm)
 source=("https://github.com/geirda/Arch/raw/master/suckless/dwm/dwm-geir.tar.xz")
-md5sums=('a4d70024443cc181ed0010f73baf4656')
+md5sums=('296b9ed7a39fde3d435da5cd63c1b991')
 
 prepare() {
 	cd "$srcdir/$pkgname"

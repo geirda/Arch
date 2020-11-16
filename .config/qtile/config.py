@@ -244,8 +244,8 @@ def init_layout_theme():
             "single_margin": 0,
             "margin": 3,
             "ratio": .517,
-            "border_focus": "81A2BE",
-            "border_normal": "1D2330"
+            "border_focus": "6B82AB",
+            "border_normal": "2E3036"
            }
 
 def init_border_args():

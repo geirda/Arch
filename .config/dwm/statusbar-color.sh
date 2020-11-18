@@ -15,7 +15,7 @@ do
 	UPDATES="$(pacman -Qu|wc -l)"
 	RAM="$(free -m | awk '/Mem/{ print $3 }')MB"
 	HEAT="$(sensors | awk '/Core 0/{ print $3 }') $(sensors | awk '/Core 1/{ print $3 }')"
-	DISKUSE="$(df -h | awk '/sda2/{ print $4 }')B"
+	DISKUSE="$(df -h | awk '/\/$/{ print $4 }')B"
 	IP=$(ip addr | awk '/ global /{ print $2 }'|head -1|cut -f1 -d \/)
 	WEATHER=$(~/.local/bin/weather.sh)
 	DATO=$(date '+uke %V:^c#b48ead^ %a%d')

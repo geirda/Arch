@@ -1,7 +1,7 @@
 # Maintainer: Geir Damstuen
 pkgname="dwm-geir"
 pkgver=6.2
-pkgrel=2
+pkgrel=3
 pkgdesc="A dynamic window manager for X"
 url="https://dwm.suckless.org"
 arch=('i686' 'x86_64')
@@ -11,7 +11,7 @@ optdepends=(nerd-fonts-roboto-mono)
 provides=(dwm)
 conflicts=(dwm)
 source=("https://github.com/geirda/Arch/raw/master/suckless/dwm/dwm-geir.tar.xz")
-md5sums=('c76d93c2e08bff24d680391e606a515a')
+md5sums=('9143f3850de86e2204acbd92cdaf6440')
 
 prepare() {
 	cd "$srcdir/$pkgname"
@@ -27,4 +27,5 @@ package() {
 	make PREFIX=/usr DESTDIR="$pkgdir" install
 	install -Dm644 "${srcdir}/${pkgname}/dwm-geir.desktop" "$pkgdir/usr/share/xsessions/dwm-geir.desktop"
 	install -Dm755 "${srcdir}/${pkgname}/dwmupdate.sh" "$pkgdir/usr/bin/dwmupdate.sh"
+	install -Dm755 "${srcdir}/${pkgname}/layoutmenu.sh" "$pkgdir/usr/bin/layoutmenu.sh"
 }

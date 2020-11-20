@@ -6,6 +6,7 @@ Patches included:
 * autostart
 * centeredmaster
 * gridmode
+* layoutmenu
 * pertag
 * resetnmaster
 * rotatestack

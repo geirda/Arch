@@ -1,4 +1,5 @@
-xmenu.font: Cantarell:size=11
+! xmenu.font: Cantarell:size=11
+xmenu.font: Hack:size=11
 xmenu.background: #36383e
 xmenu.foreground: #d2d3d3
 xmenu.selbackground: #4285f4

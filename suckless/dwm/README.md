@@ -4,8 +4,10 @@ Patches included:
 
 * attachbelow
 * autostart
+* centeredmaster
 * gridmode
 * pertag
+* resetnmaster
 * rotatestack
 * ru_gaps
 * status2d
@@ -23,12 +25,16 @@ Please note that RobotoMono Nerd Font must be installed manually, e.g.:
 
 	$ yay -S nerd-fonts-roboto-mono
 
+To get a layouts menu when rightclicking the layouts-icon, please install xmenu:
+
+	$ yay -S xmenu
+
 ## Installation (choose one of the methods):
 
 ### From precompiled binary:
 
-	$ wget https://github.com/geirda/Arch/raw/master/suckless/dwm/dwm-geir-6.2-2-x86_64.pkg.tar.zst
-	$ sudo pacman -U dwm-geir-6.2-2-x86_64.pkg.tar.zst
+	$ wget https://github.com/geirda/Arch/raw/master/suckless/dwm/dwm-geir-6.2-3-x86_64.pkg.tar.zst
+	$ sudo pacman -U dwm-geir-6.2-3-x86_64.pkg.tar.zst
 
 ### From PKGBUILD:
 
@@ -47,5 +53,7 @@ Install "Hack font" and "RobotoMono Nerd Font". "Hack" is usually found in your 
 	$ sudo apt install fonts-hack
 
 Download RobotoMono Nerd Font from https://www.nerdfonts.com/font-downloads and extract it to somewhere in your font path, like $HOME/.local/share/fonts/ or $HOME/.fonts/
+
+Optional: For a rightclick menu on the layouts icon, download and install xmenu: https://github.com/phillbush/xmenu
 
 ![suckless](https://raw.githubusercontent.com/geirda/Arch/master/suckless/suckless.png)

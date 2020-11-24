@@ -71,6 +71,10 @@ def init_keys():
                 lazy.next_layout()                      # Toggle through layouts
                 ),
             Key(
+                [mod, "shift"], "Tab",
+                lazy.prev_layout()                      # Toggle through layouts
+                ),
+            Key(
                 [mod, "shift"], "q",
                 lazy.window.kill()                      # Kill active window
                 ),
@@ -107,6 +111,14 @@ def init_keys():
                 lazy.layout.up()                        # Switch between windows in current stack pane
                 ),
             Key(
+                [mod], "l",
+                lazy.layout.right()                     # Move windows down in current stack
+                ),
+            Key(
+                [mod], "h",
+                lazy.layout.left()                      # Move windows down in current stack
+                ),
+            Key(
                 [mod, "shift"], "j",
                 lazy.layout.shuffle_down()              # Move windows down in current stack
                 ),
@@ -116,13 +128,27 @@ def init_keys():
                 ),
             Key(
                 [mod, "shift"], "l",
-                lazy.layout.grow(),                     # Grow size of current window (XmonadTall)
-                lazy.layout.increase_nmaster(),         # Increase number in master pane (Tile)
+                lazy.layout.right()                     # Move windows down in current stack
                 ),
             Key(
                 [mod, "shift"], "h",
-                lazy.layout.shrink(),                   # Shrink size of current window (XmonadTall)
-                lazy.layout.decrease_nmaster(),         # Decrease number in master pane (Tile)
+                lazy.layout.left()                      # Move windows down in current stack
+                ),
+            Key(
+                [mod], "Up",
+                lazy.layout.grow()                      # Grow size of current window (XmonadTall)
+                ),
+            Key(
+                [mod], "Down",
+                lazy.layout.shrink()                    # Shrink size of current window (XmonadTall)
+                ),
+            Key(
+                [mod], "i",
+                lazy.layout.increase_nmaster()          # Increase number in master pane (Tile)
+                ),
+            Key(
+                [mod], "d",
+                lazy.layout.decrease_nmaster()          # Decrease number in master pane (Tile)
                 ),
             Key(
                 [mod, "shift"], "Left",                 # Move window to workspace to the left
@@ -141,12 +167,11 @@ def init_keys():
                 lazy.layout.maximize()                  # Toggle a window between minimum and maximum sizes
                 ),
             Key(
-                [mod, "shift"], "KP_Enter",
+                [mod, "shift"], "space",
                 lazy.window.toggle_floating()           # Toggle floating
                 ),
             Key(
-                [mod, "shift"], "space",
-                lazy.layout.rotate(),                   # Swap panes of split stack (Stack)
+                [mod, "shift"], "Return",
                 lazy.layout.flip()                      # Switch which side main pane occupies (XmonadTall)
                 ),
             ### Stack controls
@@ -225,7 +250,7 @@ def init_group_names():
             ("SYS", {'label': '', 'layout': 'monadtall'}),
             ("DOC", {'label': '', 'layout': 'monadtall'}),
             ("VBOX", {'label': '', 'layout': 'floating'}),
-            ("CHAT", {'label': '', 'layout': 'monadtall'}),
+            ("CHAT", {'label': '', 'layout': 'matrix'}),
             ("MAIL", {'label': '', 'layout': 'monadtall'}),
             ("MEDIA", {'label': '', 'layout': 'monadtall'}),
             ("GFX", {'label': '', 'layout': 'monadtall'})]
@@ -255,7 +280,11 @@ def init_layouts():
     return [layout.MonadTall(**layout_theme),
             layout.MonadWide(**layout_theme),
             layout.Max(**layout_theme),
-            layout.Bsp(**layout_theme),
+            layout.Floating(**layout_theme),
+            layout.Matrix(**layout_theme),
+            layout.RatioTile(**layout_theme),
+            layout.VerticalTile(**layout_theme),
+            #layout.Bsp(**layout_theme),
             layout.TreeTab(
                 font = "Ubuntu",
                 fontsize = 10,
@@ -271,17 +300,16 @@ def init_layouts():
                 panel_width = 320,
                 **layout_theme
                 ),
-            layout.Slice(side="left", width=192, name="gimp", role="gimp-toolbox",
-                fallback=layout.Slice(side="right", width=256, role="gimp-dock",
-                fallback=layout.Stack(num_stacks=1, **border_args))),
+            #layout.Slice(side="left", width=192, name="gimp", role="gimp-toolbox",
+            #    fallback=layout.Slice(side="right", width=256, role="gimp-dock",
+            #    fallback=layout.Stack(num_stacks=1, **border_args))),
             #layout.Stack(stacks=2, **layout_theme),
             #layout.Columns(**layout_theme),
-            #layout.RatioTile(**layout_theme),
-            #layout.VerticalTile(**layout_theme),
-            #layout.Tile(shift_windows=True, **layout_theme),
-            #layout.Matrix(**layout_theme),
             #layout.Zoomy(**layout_theme),
-            layout.Floating(**layout_theme)]
+            layout.Tile(
+                shift_windows=True,
+                **layout_theme
+                )]
 
 ##### WIDGETS #####
 
@@ -301,8 +329,8 @@ def init_widgets_list():
                         background = colors[0]
                         ),
                widget.GroupBox(font="Ubuntu Bold",
-                        fontsize = 20,
-                        margin_y = 4,
+                        fontsize = 22,
+                        margin_y = 2,
                         margin_x = 0,
                         padding_y = 5,
                         padding_x = 5,

@@ -20,8 +20,8 @@ Please note that Hack Nerd Font must be installed manually. This is optional tho
 
 ### From precompiled binary:
 
-	$ wget https://github.com/geirda/Arch/raw/master/suckless/st/st-geir-0.8.4-1-x86_64.pkg.tar.zst
-	$ sudo pacman -U st-geir-0.8.4-1-x86_64.pkg.tar.zst
+	$ wget https://github.com/geirda/Arch/raw/master/suckless/st/st-geir-0.8.4-2-x86_64.pkg.tar.zst
+	$ sudo pacman -U st-geir-0.8.4-2-x86_64.pkg.tar.zst
 
 ### From PKGBUILD:
 

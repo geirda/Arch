@@ -20,15 +20,5 @@ This build of dmenu uses the following font:
 	$ wget https://raw.githubusercontent.com/geirda/Arch/master/suckless/dmenu/PKGBUILD
 	$ makepkg -i
 
-### Manually (and for other distros than Arch-based ones):
-
-	$ wget https://github.com/geirda/Arch/raw/master/suckless/dmenu/dmenu-geir.tar.xz
-	$ tar xvf dmenu-geir.tar.xz
-	$ cd dmenu-geir
-	$ sudo make install
-
-Install "Hack font". This font is usually found in your distro's repo, on a Debian-based system do a:
-
-	$ sudo apt install fonts-hack
 
 ![suckless](https://raw.githubusercontent.com/geirda/Arch/master/suckless/suckless.png)

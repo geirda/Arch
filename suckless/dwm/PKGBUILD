@@ -3,15 +3,15 @@ pkgname="dwm-geir"
 pkgver=6.2
 pkgrel=5
 pkgdesc="A dynamic window manager for X"
-url="https://dwm.suckless.org"
+url="https://github.com/geirda/dwm-geir.git"
 arch=('i686' 'x86_64')
 license=('MIT')
 depends=('libx11' 'libxinerama' 'libxft' 'freetype2' 'ttf-hack')
 optdepends=(nerd-fonts-roboto-mono)
 provides=(dwm)
 conflicts=(dwm)
-source=("https://github.com/geirda/Arch/raw/master/suckless/dwm/dwm-geir.tar.xz")
-md5sums=('e882b772d5425d8382db541fa4772830')
+source=("git+$url")
+md5sums=('SKIP')
 
 prepare() {
 	cd "$srcdir/$pkgname"

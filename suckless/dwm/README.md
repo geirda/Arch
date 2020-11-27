@@ -42,7 +42,7 @@ To get a layouts menu when rightclicking the layouts-icon, please install xmenu:
 ### From PKGBUILD:
 
 	$ wget https://raw.githubusercontent.com/geirda/Arch/master/suckless/dwm/PKGBUILD
-	$ makepkg -i
+	$ makepkg -ci
 
 
 ![suckless](https://raw.githubusercontent.com/geirda/Arch/master/suckless/suckless.png)

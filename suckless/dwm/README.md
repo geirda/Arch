@@ -5,7 +5,7 @@ Patches included:
 * attachbelow
 * autostart
 * centeredmaster
-* gridmode
+* gaplessgrid
 * layoutmenu
 * pertag
 * resetnmaster

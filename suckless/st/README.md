@@ -1,5 +1,7 @@
 # st 0.8.4
 
+See also: https://github.com/geirda/st-geir.git
+
 Patches included:
 
 * alphaFocusHighlight

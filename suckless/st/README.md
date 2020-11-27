@@ -28,7 +28,7 @@ Please note that Hack Nerd Font must be installed manually. This is optional tho
 ### From PKGBUILD:
 
 	$ wget https://raw.githubusercontent.com/geirda/Arch/master/suckless/st/PKGBUILD
-	$ makepkg -i
+	$ makepkg -ci
 
 
 ![suckless](https://raw.githubusercontent.com/geirda/Arch/master/suckless/suckless.png)

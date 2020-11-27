@@ -28,17 +28,5 @@ Please note that Hack Nerd Font must be installed manually. This is optional tho
 	$ wget https://raw.githubusercontent.com/geirda/Arch/master/suckless/st/PKGBUILD
 	$ makepkg -i
 
-### Manually (and for other distros than Arch-based ones):
-
-	$ wget https://github.com/geirda/Arch/raw/master/suckless/st/st-geir.tar.xz
-	$ tar xvf st-geir.tar.xz
-	$ cd st-geir
-	$ sudo make install
-
-Install "Hack font". This font is usually found in your distro's repo, on a Debian-based system do a:
-
-	$ sudo apt install fonts-hack
-
-Optional: Download Hack Nerd Font from https://www.nerdfonts.com/font-downloads and extract it to somewhere in your font path, like $HOME/.local/share/fonts/ or $HOME/.fonts/
 
 ![suckless](https://raw.githubusercontent.com/geirda/Arch/master/suckless/suckless.png)

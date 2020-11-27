@@ -9,7 +9,7 @@ license=('MIT')
 depends=('libx11' 'libxinerama' 'libxft' 'freetype2' 'ttf-hack')
 provides=(dmenu)
 conflicts=(dmenu)
-source=("https://github.com/geirda/Arch/raw/master/suckless/dmenu/dmenu-geir.tar.xz")
+source=("git+$url")
 md5sums=('SKIP')
 
 prepare() {

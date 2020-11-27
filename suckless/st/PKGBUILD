@@ -10,7 +10,7 @@ depends=('libx11' 'libxft' 'freetype2' 'ttf-hack')
 optdepends=(nerd-fonts-hack)
 provides=(st)
 conflicts=(st)
-source=("git+url")
+source=("git+$url")
 md5sums=('SKIP')
 
 prepare() {

@@ -20,7 +20,7 @@ This build of dmenu uses the following font:
 ### From PKGBUILD:
 
 	$ wget https://raw.githubusercontent.com/geirda/Arch/master/suckless/dmenu/PKGBUILD
-	$ makepkg -i
+	$ makepkg -ci
 
 
 ![suckless](https://raw.githubusercontent.com/geirda/Arch/master/suckless/suckless.png)

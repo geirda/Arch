@@ -1,5 +1,7 @@
 # dwm 6.2
 
+See also: https://github.com/geirda/dwm-geir.git
+
 Patches included:
 
 * attachbelow

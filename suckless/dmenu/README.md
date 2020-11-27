@@ -1,5 +1,7 @@
 # dmenu 5.0
 
+See also: https://github.com/geirda/dmenu-geir.git
+
 Patches included:
 
 * lineheight

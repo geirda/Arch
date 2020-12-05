@@ -36,8 +36,8 @@ To get a layouts menu when rightclicking the layouts-icon, please install xmenu:
 
 ### From precompiled binary:
 
-	$ wget https://github.com/geirda/Arch/raw/master/suckless/dwm/dwm-geir-6.2-5-x86_64.pkg.tar.zst
-	$ sudo pacman -U dwm-geir-6.2-5-x86_64.pkg.tar.zst
+	$ wget https://github.com/geirda/Arch/raw/master/suckless/dwm/dwm-geir-6.2-6-x86_64.pkg.tar.zst
+	$ sudo pacman -U dwm-geir-6.2-6-x86_64.pkg.tar.zst
 
 ### From PKGBUILD:
 

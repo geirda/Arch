@@ -230,9 +230,9 @@ def init_keys():
 ##### BAR COLORS #####
 
 def init_colors():
-    return [["#191d2e", "#191d2e"], # panel background
+    return [["#191D2E", "#191D2E"], # panel background
             ["#434758", "#434758"], # background for current screen tab
-            ["#D0D0D0", "#D0D0D0"], # font color for group names
+            ["#A7A7A7", "#A7A7A7"], # font color for group names
             ["#CC6666", "#CC6666"], # color for layout widget
             ["#000000", "#000000"], # background for other screen tabs
             ["#8ABEB7", "#8ABEB7"], # color for window widget

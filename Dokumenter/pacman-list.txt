@@ -11,7 +11,7 @@ bind
 binutils
 bison
 brave-bin
-broot
+cdrtools
 chafa
 checkbashisms
 checkupdates-aur
@@ -21,6 +21,7 @@ colorpicker
 cpu-x
 dash
 dashbinsh
+deadbeef
 dragon-drag-and-drop
 efibootmgr
 elinks
@@ -28,6 +29,7 @@ exa
 faad2
 fakeroot
 fbcat
+figlet
 file
 findutils
 firefox
@@ -64,6 +66,7 @@ libtool
 linux
 linux-firmware
 linux-lts
+luit
 lxappearance
 m4
 make
@@ -88,6 +91,8 @@ nfs-utils
 nitrogen
 nm-connection-editor
 nmap
+noto-fonts
+ntfs-3g
 numlockx
 odt2txt
 opendoas
@@ -100,16 +105,16 @@ papirus-icon-theme
 patch
 pavucontrol
 pcmanfm
-pfetch
+pfetch-git
 picom
 pkgconf
+psi
 pulseaudio-alsa
 pulsemixer
 qt5ct
 ranger
 readability-cli
 rofi
-rrr
 rsync
 scrot
 sed
@@ -121,6 +126,7 @@ sxiv
 sysstat
 taglib
 texinfo
+transmission-gtk
 ttf-dejavu
 ttf-font-awesome
 ttf-hack
@@ -135,6 +141,7 @@ ueberzug
 unrar
 unzip
 urlscan
+usbutils
 vifm
 vim-airline
 vim-commentary
@@ -152,6 +159,7 @@ xclip
 xdo
 xdotool
 xf86-video-vesa
+xiccd
 xmenu
 xorg-bdftopcf
 xorg-docs
@@ -160,7 +168,6 @@ xorg-fonts-100dpi
 xorg-fonts-75dpi
 xorg-fonts-encodings
 xorg-iceauth
-xorg-luit
 xorg-mkfontscale
 xorg-server
 xorg-server-common
@@ -168,7 +175,6 @@ xorg-server-devel
 xorg-server-xephyr
 xorg-server-xnest
 xorg-server-xvfb
-xorg-server-xwayland
 xorg-sessreg
 xorg-setxkbmap
 xorg-smproxy
@@ -199,12 +205,14 @@ xorg-xrefresh
 xorg-xset
 xorg-xsetroot
 xorg-xvinfo
+xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
 yay
 zathura
 zathura-pdf-mupdf
+zip
 zsh
 zsh-autosuggestions
 zsh-completions

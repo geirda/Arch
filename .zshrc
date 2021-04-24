@@ -173,9 +173,8 @@ bindkey "\e[F" end-of-line
 # completion in the middle of a line
 bindkey '^i' expand-or-complete-prefix
 
-# display fortune cookie
+# display system information
 pfetch
-fortune
 
 case "$TERM" in
 xterm*)
@@ -190,10 +189,11 @@ alacritty*)
 	;;
 esac
 
-source /home/geir/.config/broot/launcher/bash/br
-
 case "$TTY" in
 /dev/tty1)
 	startx
+	;;
+*)
+	fortune
 	;;
 esac

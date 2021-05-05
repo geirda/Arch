@@ -6,11 +6,12 @@ if [ -f "$userresources" ]; then
     xrdb -merge "$userresources"
 fi
 
-setxkbmap -layout no-hyper -option "compose:rctrl"
+setxkbmap -layout no-hyper -option "compose:menu"
 numlockx
 xsetroot -cursor_name left_ptr
 xinput --set-prop 'Logitech USB-PS/2 Optical Mouse' 'libinput Accel Speed' 1
 
 start-pulseaudio-x11 &
+#xiccd &
 
 exec dwm

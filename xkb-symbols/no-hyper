@@ -28,7 +28,8 @@ xkb_symbols "basic" {
     key <BKSL>	{ [apostrophe,   asterisk, dead_doubleacute, multiply ]	};
     key <LSGT>	{ [      less,    greater,      onehalf, threequarters]	};
 
-    key <CAPS>  { [ Hyper_L					      ]	};
+    key <CAPS>  { [ Control_L					      ]	};
+    key <LCTL>  { [ Hyper_L					      ]	};
 
     modifier_map Mod3   { Hyper_L, Hyper_R };
     modifier_map Mod3   { <HYPR> };

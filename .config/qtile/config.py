@@ -330,7 +330,7 @@ def init_widgets_list():
                         ),
                widget.GroupBox(font="Ubuntu Bold",
                         fontsize = 22,
-                        margin_y = 2,
+                        margin_y = 3,
                         margin_x = 0,
                         padding_y = 5,
                         padding_x = 5,
@@ -367,11 +367,11 @@ def init_widgets_list():
                         ),
                widget.TextBox(
                         font="Ubuntu Bold",
-                        text="  ☵",
+                        text="  ",
                         padding = 5,
                         foreground=colors[2],
                         background=colors[0],
-                        fontsize=14
+                        fontsize=16
                         ),
                widget.CurrentLayout(
                         foreground = colors[3],
@@ -384,7 +384,7 @@ def init_widgets_list():
                         padding = 5,
                         foreground=colors[9],
                         background=colors[0],
-                        fontsize=14
+                        fontsize=12
                         ),
                widget.TextBox(
                         font="Ubuntu Bold",
@@ -392,14 +392,14 @@ def init_widgets_list():
                         foreground=colors[2],
                         background=colors[0],
                         padding = 0,
-                        fontsize=18
+                        fontsize=16
                         ),
                widget.GenPollText(
                         foreground=colors[6],
                         background=colors[0],
                         fmt = ' {} ',
                         update_interval=60,
-                        func = lambda: subprocess.check_output("/home/geir/.local/bin/ip.sh").decode("utf-8").replace('\n', '')
+                        func = lambda: subprocess.check_output("/home/geir/.config/qtile/ip.sh").decode("utf-8").replace('\n', '')
                         ),
                widget.TextBox(
                         font="Ubuntu Bold",
@@ -407,22 +407,22 @@ def init_widgets_list():
                         padding = 5,
                         foreground=colors[9],
                         background=colors[0],
-                        fontsize=14
+                        fontsize=12
                         ),
                widget.TextBox(
                         font="Ubuntu Bold",
-                        text=" ⟳",
+                        text=" ",
                         padding = 5,
                         foreground=colors[2],
                         background=colors[0],
-                        fontsize=14
+                        fontsize=16
                         ),
-               widget.CheckUpdates(
-                        colour_no_updates = colors[7],
-                        colour_have_updates = colors[7],
-                        background = colors[0],
-                        distro = "Arch",
-                        custom_command = "pacman -Qu"
+               widget.GenPollText(
+                        foreground=colors[7],
+                        background=colors[0],
+                        fmt = ' {} ',
+                        update_interval=3600,
+                        func = lambda: subprocess.check_output("/home/geir/.config/qtile/pac-aur.sh").decode("utf-8").replace('\n', '')
                         ),
                widget.TextBox(
                         font="Ubuntu Bold",
@@ -430,7 +430,7 @@ def init_widgets_list():
                         padding = 5,
                         foreground=colors[9],
                         background=colors[0],
-                        fontsize=14
+                        fontsize=12
                         ),
                widget.TextBox(
                         font="Ubuntu Bold",
@@ -438,12 +438,12 @@ def init_widgets_list():
                         padding = 5,
                         foreground=colors[2],
                         background=colors[0],
-                        fontsize=14
+                        fontsize=16
                         ),
                widget.GenPollText(
                         update_interval=60,
                         fmt = ' {} ',
-                        func = lambda: subprocess.check_output("/home/geir/.local/bin/disk.sh").decode("utf-8").replace('\n', ''),
+                        func = lambda: subprocess.check_output("/home/geir/.config/qtile/disk.sh").decode("utf-8").replace('\n', ''),
                         foreground=colors[5],
                         background=colors[0]
                         ),
@@ -453,7 +453,7 @@ def init_widgets_list():
                         padding = 5,
                         foreground=colors[9],
                         background=colors[0],
-                        fontsize=14
+                        fontsize=12
                         ),
                widget.TextBox(
                         font="Ubuntu Bold",
@@ -461,9 +461,12 @@ def init_widgets_list():
                         padding = 5,
                         foreground=colors[2],
                         background=colors[0],
-                        fontsize=14
+                        fontsize=16
                         ),
-               widget.Memory(
+               widget.GenPollText(
+                        update_interval=10,
+                        fmt = ' {} ',
+                        func = lambda: subprocess.check_output("/home/geir/.config/qtile/mem.sh").decode("utf-8").replace('\n', ''),
                         foreground=colors[8],
                         background=colors[0]
                         ),
@@ -473,7 +476,7 @@ def init_widgets_list():
                         padding = 5,
                         foreground=colors[9],
                         background=colors[0],
-                        fontsize=14
+                        fontsize=12
                         ),
                widget.TextBox(
                         font="Ubuntu Bold",
@@ -481,7 +484,7 @@ def init_widgets_list():
                         foreground=colors[2],
                         background=colors[0],
                         padding = 5,
-                        fontsize=14
+                        fontsize=16
                         ),
                widget.Clock(
                         foreground = colors[2],
@@ -548,7 +551,7 @@ for i, (name, kwargs) in enumerate(group_names, 1):
 
 @hook.subscribe.startup_once
 def start_once():
-    home = os.path.expanduser('~')
+    home = os.path.expanduser('/home/geir')
     subprocess.call([home + '/.config/qtile/autostart.sh'])
 
 ##### NEEDED FOR SOME JAVA APPS #####

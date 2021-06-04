@@ -1,0 +1,9 @@
+[Trigger]
+Operation = Upgrade
+Operation = Install
+Type = Package
+Target = *
+[Action]
+Description = Refreshing updates.txt
+When = PostTransaction
+Exec = /usr/local/bin/logupdates.sh

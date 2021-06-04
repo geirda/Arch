@@ -12,7 +12,7 @@ ORANGE="^c#de935f^"
 
 while true;
 do
-	UPDATES="$(pacman -Qu|wc -l)"
+	UPDATES="$(head -1 /var/local/updates.txt) aur: $(tail -1 /var/local/updates.txt)"
 	RAM="$(free -m | awk '/Mem/{ print $3 }')MB"
 	HEAT="$(sensors | awk '/Core 0/{ print $3 }') $(sensors | awk '/Core 1/{ print $3 }')"
 	DISKUSE="$(df -h | awk '/\/$/{ print $4 }')B"

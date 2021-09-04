@@ -1,0 +1,6 @@
+configuration {
+	theme:		"/usr/share/rofi/themes/android_notification.rasi";
+	font:		"Hack Nerd Font 12";
+	combi-modi:	"window,drun";
+	modi:		"combi,run";
+}

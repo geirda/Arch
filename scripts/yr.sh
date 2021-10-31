@@ -6,8 +6,12 @@ STI=~/.cache/yr
 
 [ ! -d $STI ] && mkdir -p $STI
 
-wget https://www.yr.no/sted/Norge/Oslo/Oslo/Sofienberg_kirke/varsel.rss -O $STI/varsel.xml >/dev/null 2>&1
-wget https://www.yr.no/sted/Norge/Akershus/L%C3%B8renskog/Rufsrud/varsel.rss -O $STI/varsel2.xml >/dev/null 2>&1
+wget -q https://www.yr.no/sted/Norge/Oslo/Oslo/Ulven/varsel.rss -O $STI/varsel.tmp
+sleep 30
+wget -q https://www.yr.no/sted/Norge/Akershus/L%C3%B8renskog/Rufsrud/varsel.rss -O $STI/varsel2.tmp
+
+[ -s $STI/varsel.tmp ] && cp $STI/varsel.tmp $STI/varsel.xml
+[ -s $STI/varsel2.tmp ] && cp $STI/varsel2.tmp $STI/varsel2.xml
 
 VARSEL=$(grep description $STI/varsel.xml|head -2|tail -1|cut -f2- -d \>|cut -f1 -d \<)
 VARSEL2=$(grep description $STI/varsel2.xml|head -2|tail -1|cut -f2- -d \>|cut -f1 -d \<)
@@ -18,4 +22,3 @@ echo $TEMPERATUR > $STI/data.txt
 echo $TEMPERATUR2 >> $STI/data.txt
 echo $VARSEL > $STI/data2.txt
 echo $VARSEL2 >> $STI/data2.txt
-

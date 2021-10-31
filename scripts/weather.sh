@@ -5,7 +5,7 @@
 STI="$HOME/.cache/yr"
 
 [ -f "$STI/data.txt" ] && WEATHER="$(head -1 $STI/data.txt)C" || WEATHER="X°C"
-[ -f "$STI/varsel.xml" ] && CONDITIONS="$(grep enclosure $STI/varsel.xml | head -1 | cut -f2 -d \"| cut -f9 -d \/)" || IKON="*"
+[ -f "$STI/varsel.xml" ] && CONDITIONS="$(grep enclosure $STI/varsel.xml | head -1 | cut -f2 -d \"| cut -f9 -d \/)" || IKON="X"
 
 case "$CONDITIONS" in
 	01d.png)	IKON=" "	;;

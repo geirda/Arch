@@ -14,6 +14,9 @@ hyper + r
 super + x
  rofi -show combi -width 35
 
+super + c
+ galculator
+
 hyper + f
  firefox
 
@@ -48,6 +51,9 @@ hyper + m
 hyper + y
  browser.sh https://www.youtube.com
 
+hyper + shift + v
+ browser.sh https://www.yr.no/nb/v%C3%A6rvarsel/daglig-tabell/5-18315/Norge/Oslo/Oslo/Sofienberg
+
 hyper + w
  SOK=$(rofi -dmenu -width 30 -l 0 -p "   Wikipedia"); [ -z $SOK ] || browser.sh "https://en.wikipedia.org/wiki/$SOK"
 
@@ -57,8 +63,14 @@ hyper + a
 hyper + c
  SOK=$(rofi -dmenu -width 30 -l 0 -p "   Dict.cc"); [ -z $SOK ] || browser.sh "https://www.dict.cc/?s=$SOK"
 
+hyper + d
+ SOK=$(rofi -dmenu -width 30 -l 0 -p "   DuckDuckGo"); [ -z $SOK ] || browser.sh "https://duckduckgo.com/?t=ffnt&q=$SOK"
+
 hyper + l
- SOK=$(rofi -dmenu -width 30 -l 0 -p "   Latin wiktionary"); [ -z $SOK ] || browser.sh "https://la.wiktionary.org/wiki/$SOK"
+ SOK=$(rofi -dmenu -width 30 -l 0 -p "   Latin Wiktionary"); [ -z $SOK ] || browser.sh "https://la.wiktionary.org/wiki/$SOK"
+
+hyper + shift + l
+ SOK=$(rofi -dmenu -width 30 -l 0 -p "   Latin Verbix"); [ -z $SOK ] || browser.sh "https://verbix.com/webverbix/go.php?&D1=9&T1=$SOK"
 
 hyper + t
  SOK=$(rofi -dmenu -width 30 -l 0 -p "   Google Translate"); [ -z $SOK ] || browser.sh "https://translate.google.com/#view=home&op=translate&sl=auto&tl=en&text=$SOK"
@@ -88,6 +100,24 @@ hyper + 6
  browser.sh https://github.com/BrodieRobertson
 
 # FN-buttons
+hyper + F1
+ browser.sh https://gmail.google.com
+
+hyper + F2
+ browser.sh https://ordbok.uib.no
+
+hyper + F3
+ browser.sh https://en.wikipedia.org
+
+hyper + F4
+ browser.sh https://lokalhistoriewiki.no
+
+hyper + F5
+ browser.sh https://www.startpage.com
+
+hyper + F6
+ deadbeef
+
 XF86HomePage
  browser.sh https://en.wikipedia.org
 

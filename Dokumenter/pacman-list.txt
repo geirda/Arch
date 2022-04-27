@@ -1,3 +1,4 @@
+aisleriot
 alacritty
 alsa-utils
 arc-gtk-theme
@@ -7,6 +8,7 @@ autoconf
 automake
 base
 bat
+beep
 bind
 binutils
 bison
@@ -14,7 +16,7 @@ brave-bin
 cdrtools
 chafa
 checkbashisms
-checkupdates-aur
+checkupdates+aur
 cmus
 colord-gtk
 colorpicker
@@ -22,6 +24,7 @@ cpu-x
 dash
 dashbinsh
 deadbeef
+dkms
 dragon-drag-and-drop
 efibootmgr
 elinks
@@ -48,6 +51,7 @@ gitstatus-bin
 go
 grep
 groff
+grub
 guake
 guvcview
 gvim
@@ -57,7 +61,7 @@ highlight
 htop
 intel-ucode
 keepassxc
-kvantum-qt5
+kvantum
 lf
 lhasa
 libmpcdec
@@ -66,6 +70,7 @@ libtool
 linux
 linux-firmware
 linux-lts
+linux-lts-headers
 luit
 lxappearance
 m4
@@ -84,7 +89,6 @@ nerd-fonts-fira-code
 nerd-fonts-hack
 nerd-fonts-jetbrains-mono
 nerd-fonts-meslo
-netkit-bsd-finger
 networkmanager
 newsboat
 nfs-utils
@@ -97,9 +101,11 @@ numlockx
 odt2txt
 opendoas
 openssh
+os-prober
 p7zip
 pacman
 pacman-contrib
+pahole
 paper-icon-theme
 papirus-icon-theme
 patch
@@ -108,18 +114,21 @@ pcmanfm
 pfetch-git
 picom
 pkgconf
+postfix
 psi
 pulseaudio-alsa
 pulsemixer
 qt5ct
 ranger
-readability-cli
 rofi
 rsync
+s-nail
 scrot
 sed
 simplescreenrecorder
+smartmontools
 spaceship-prompt-git
+speedtest-cli
 sudo
 sxhkd
 sxiv
@@ -136,7 +145,6 @@ ttf-ms-fonts
 ttf-roboto-mono
 ttf-symbola
 ttf-ubuntu-font-family
-tuir
 ueberzug
 unrar
 unzip
@@ -150,6 +158,7 @@ vim-easymotion
 vim-nerdtree
 vimix-gtk-themes
 virtualbox
+virtualbox-host-dkms
 w3m
 wavpack
 weechat

@@ -15,4 +15,6 @@ xrandr --auto --output HDMI-1 --right-of DP-1
 start-pulseaudio-x11 &
 #xiccd &
 
+$HOME/.local/bin/nummie.sh &
+
 exec dwm

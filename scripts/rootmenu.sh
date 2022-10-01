@@ -9,6 +9,9 @@ IMG:$ICONPATH/apps/brave.png			Web browser (brave)		brave
 IMG:$ICONPATH/apps/libreoffice-writer.png	Word processor (lowriter)	lowriter
 IMG:$ICONPATH/apps/gimp.png			Image manipulation (gimp)	gimp
 
+IMG:$ICONPATH/apps/aisleriot.png		Solitaire (aisleriot)		sol
+IMG:$ICONPATH/apps/gnome-mahjongg.png		Mahjongg			gnome-mahjongg
+
 IMG:$ICONPATH/apps/keepassxc.png		Password manager (KeePass)	keepassxc
 IMG:$ICONPATH/apps/virtualbox.png		Virtualbox			virtualbox
 

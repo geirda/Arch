@@ -39,7 +39,7 @@ ctrl + Escape
  progmenu.sh
 
 # Firefox quick launchers
-super + w
+hyper + w
  SOK=$(rofi -dmenu -width 30 -l 0 -p "   Wikipedia language code"); [ -z $SOK ] || browser.sh "https://${SOK}.wikipedia.org"
 
 hyper + k
@@ -54,7 +54,7 @@ hyper + y
 hyper + shift + v
  browser.sh https://www.yr.no/nb/v%C3%A6rvarsel/daglig-tabell/5-18315/Norge/Oslo/Oslo/Sofienberg
 
-hyper + w
+super + w
  SOK=$(rofi -dmenu -width 30 -l 0 -p "   Wikipedia"); [ -z $SOK ] || browser.sh "https://en.wikipedia.org/wiki/$SOK"
 
 hyper + a

@@ -2,6 +2,8 @@
 
 prog="LOWriter
 KeepassXC
+Psi
+Kabal
 VirtualBox
 Appearance
 Wallpaper
@@ -13,6 +15,8 @@ cmd=$(dmenu -h 24 -l 15 -nb '#0a0a0a' -nf '#808080' -sb '#3a3436' -sf '#cac5b5' 
 case ${cmd%% *} in
 	LOWriter)	lowriter ;;
 	KeepassXC)	keepassxc ;;
+	Psi)		psi ;;
+	Kabal)		sol ;;
 	VirtualBox)	virtualbox ;;
 	Appearance)	lxappearance ;;
 	Wallpaper)	nitrogen ;;

@@ -6,17 +6,17 @@ STI=~/.cache/yr
 
 [ ! -d $STI ] && mkdir -p $STI
 
-wget -q https://www.yr.no/sted/Norge/Oslo/Oslo/Ulven/varsel.rss -O $STI/varsel.tmp
-sleep 30
-wget -q https://www.yr.no/sted/Norge/Akershus/L%C3%B8renskog/Rufsrud/varsel.rss -O $STI/varsel2.tmp
+wget -q "https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=59.92479&lon=10.81059&altitude=99" -O $STI/varsel.tmp
+sleep 10
+wget -q "https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=59.94097&lon=10.94366&altitude=160" -O $STI/varsel2.tmp
 
-[ -s $STI/varsel.tmp ] && cp $STI/varsel.tmp $STI/varsel.xml
-[ -s $STI/varsel2.tmp ] && cp $STI/varsel2.tmp $STI/varsel2.xml
+[ -s $STI/varsel.tmp ] && cp $STI/varsel.tmp $STI/varsel.json
+[ -s $STI/varsel2.tmp ] && cp $STI/varsel2.tmp $STI/varsel2.json
 
-VARSEL=$(grep description $STI/varsel.xml|head -2|tail -1|cut -f2- -d \>|cut -f1 -d \<)
-VARSEL2=$(grep description $STI/varsel2.xml|head -2|tail -1|cut -f2- -d \>|cut -f1 -d \<)
-TEMPERATUR=$(echo $VARSEL|cut -f2- -d .|awk '{print $1}')
-TEMPERATUR2=$(echo $VARSEL2|cut -f2- -d .|awk '{print $1}')
+VARSEL=$(cat $STI/varsel.json|cut -f90 -d\")
+VARSEL2=$(cat $STI/varsel2.json|cut -f90 -d\")
+TEMPERATUR=$(cat $STI/varsel.json|cut -f52 -d \:|cut -f1 -d\,)
+TEMPERATUR2=$(cat $STI/varsel2.json|cut -f52 -d \:|cut -f1 -d\,)
 
 echo $TEMPERATUR > $STI/data.txt
 echo $TEMPERATUR2 >> $STI/data.txt

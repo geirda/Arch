@@ -1,35 +1,35 @@
 #!/bin/sh
 # This script requires a patched nerd font for the weather icons
-# Depends upon the script yr.sh to retrieve weather data
 
-STI="$HOME/.cache/yr"
+STI="$HOME/Debian/.cache/yr"
 
-[ -f "$STI/data.txt" ] && WEATHER="$(head -1 $STI/data.txt)C" || WEATHER="X°C"
-[ -f "$STI/varsel.xml" ] && CONDITIONS="$(grep enclosure $STI/varsel.xml | head -1 | cut -f2 -d \"| cut -f9 -d \/)" || IKON="X"
+[ -f "$STI/data.txt" ] && WEATHER="$(head -1 $STI/data.txt)°C" || WEATHER="X°C"
+[ -f "$STI/data2.txt" ] && CONDITIONS="$(head -1 $STI/data2.txt)" || IKON="X"
 
 case "$CONDITIONS" in
-	01d.png)	IKON=" "	;;
-	01n.png)	IKON=" "	;;
-	02d.png)	IKON=" "	;;
-	02n.png)	IKON=" "	;;
-	03d.png)	IKON=" "	;;
-	03n.png)	IKON=" "	;;
-	04.png)		IKON=" "	;;
-	05d.png)	IKON=" "	;;
-	05n.png)	IKON=" "	;;
+	clearsky_day)		IKON=" "	;;
+	clearsky_night)		IKON=" "	;;
+	fair_day)		IKON=" "	;;
+	fair_night)		IKON=" "	;;
+	partlycloudy_day)	IKON=" "	;;
+	partlycloudy_night)	IKON=" "	;;
+	cloudy)			IKON=" "	;;
+	lightrainshowers_day)	IKON=" "	;;
+	lightrainshowers_night)	IKON=" "	;;
+	heavyrain)		IKON=" "	;;
+	fog)			IKON=" "	;;
+	lightrain)		IKON=" "	;;
+	rain)			IKON=" "	;;
+	heavyrainandthunder)	IKON=" "	;;
+	rainandthunder)		IKON=" "	;;
 	06d.png)	IKON=" "	;;
 	06n.png)	IKON=" "	;;
 	07d.png)	IKON=" "	;;
 	07n.png)	IKON=" "	;;
 	08d.png)	IKON=" "	;;
 	08n.png)	IKON=" "	;;
-	09.png)		IKON=" "	;;
-	10.png)		IKON=" "	;;
-	11.png)		IKON=" "	;;
 	12.png)		IKON=" "	;;
 	13.png)		IKON=" "	;;
-	14.png)		IKON=" "	;;
-	15.png)		IKON=" "	;;
 	20d.png)	IKON=" "	;;
 	20n.png)	IKON=" "	;;
 	21d.png)	IKON=" "	;;
@@ -65,7 +65,6 @@ case "$CONDITIONS" in
 	44n.png)	IKON=" "	;;
 	45d.png)	IKON=" "	;;
 	45n.png)	IKON=" "	;;
-	46.png)		IKON=" "	;;
 	47.png)		IKON=" "	;;
 	48.png)		IKON=" "	;;
 	49.png)		IKON=" "	;;

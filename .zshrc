@@ -62,6 +62,8 @@ SPACESHIP_PROMPT_SEPARATE_LINE=false
 SPACESHIP_CHAR_SYMBOL=❯
 SPACESHIP_CHAR_SUFFIX=" "
 SPACESHIP_HG_SHOW=false
+SPACESHIP_PROMPT_ASYNC=false
+SPACESHIP_ASYNC_SHOW=false
 SPACESHIP_PACKAGE_SHOW=false
 SPACESHIP_NODE_SHOW=false
 SPACESHIP_RUBY_SHOW=false
@@ -78,10 +80,10 @@ SPACESHIP_DOCKER_CONTEXT_SHOW=false
 SPACESHIP_AWS_SHOW=false
 SPACESHIP_CONDA_SHOW=false
 SPACESHIP_VENV_SHOW=false
-SPACESHIP_PYENV_SHOW=false
+SPACESHIP_PYTHON_SHOW=false
 SPACESHIP_DOTNET_SHOW=false
 SPACESHIP_EMBER_SHOW=false
-SPACESHIP_KUBECONTEXT_SHOW=false
+SPACESHIP_KUBECTL_CONTEXT_SHOW=false
 SPACESHIP_TERRAFORM_SHOW=false
 SPACESHIP_TERRAFORM_SHOW=false
 SPACESHIP_VI_MODE_SHOW=false
@@ -89,6 +91,7 @@ SPACESHIP_JOBS_SHOW=false
 
 autoload -U promptinit; promptinit
 prompt spaceship
+# source ~/src/spaceship-prompt/spaceship.zsh
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

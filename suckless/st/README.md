@@ -1,4 +1,4 @@
-# st 0.8.4
+# st 0.9
 
 See also: https://github.com/geirda/st-geir.git
 
@@ -11,19 +11,15 @@ Patches included:
 
 This build of st uses the following two fonts:
 
-* aur/nerd-fonts-hack
 * extra/ttf-hack
-
-Please note that Hack Nerd Font must be installed manually. This is optional though, as st will use Hack Font as the fallback. To install Hack Nerd Font:
-
-	$ yay -S nerd-fonts-hack
+* community/ttf-hack-nerd
 
 ## Installation (choose one of the methods):
 
 ### From precompiled binary:
 
-	$ wget https://github.com/geirda/Arch/raw/master/suckless/st/st-geir-0.8.4-2-x86_64.pkg.tar.zst
-	$ sudo pacman -U st-geir-0.8.4-2-x86_64.pkg.tar.zst
+	$ wget https://github.com/geirda/Arch/raw/master/suckless/st/st-geir-0.9-1-x86_64.pkg.tar.zst
+	$ sudo pacman -U st-geir-0.9-1-x86_64.pkg.tar.zst
 
 ### From PKGBUILD:
 

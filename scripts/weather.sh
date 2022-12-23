@@ -22,6 +22,9 @@ case "$CONDITIONS" in
 	rain)			IKON=" "	;;
 	heavyrainandthunder)	IKON=" "	;;
 	rainandthunder)		IKON=" "	;;
+	lightsnow)		IKON=" "	;;
+	snow)			IKON=" "	;;
+	sleet)			IKON=" "	;;
 	06d.png)	IKON=" "	;;
 	06n.png)	IKON=" "	;;
 	07d.png)	IKON=" "	;;
@@ -65,9 +68,7 @@ case "$CONDITIONS" in
 	44n.png)	IKON=" "	;;
 	45d.png)	IKON=" "	;;
 	45n.png)	IKON=" "	;;
-	47.png)		IKON=" "	;;
 	48.png)		IKON=" "	;;
-	49.png)		IKON=" "	;;
 	50.png)		IKON=" "	;;
 esac
 

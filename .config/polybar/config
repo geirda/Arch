@@ -56,11 +56,12 @@ type = internal/bspwm
 ws-icon-0 = term;
 ws-icon-1 = web;
 ws-icon-2 = vbox;
-ws-icon-3 = files;
-ws-icon-4 = img;
-ws-icon-5 = music;
-ws-icon-6 = chat;
-ws-icon-7 = VIII;
+ws-icon-3 = IV;
+ws-icon-4 = V;
+ws-icon-5 = VI;
+ws-icon-6 = VII;
+ws-icon-7 = VIII;
+ws-icon-8 = IX;
 ws-icon-default = []
 
 format = <label-state> <label-mode>
@@ -102,7 +103,7 @@ type = custom/script
 exec = echo "Updates: $(($(apt list --upgradeable 2>/dev/null|wc -l) - 1))"
 label-padding = 1
 format = <label>
-interval = 5.0
+interval = 3600.0
 format-foreground = ${colors.foreground}
 label-background = ${colors.color0}
 label-underline = ${colors.background}
@@ -132,7 +133,7 @@ format-padding = 0
 
 [module/gpu]
 type = custom/script
-exec = echo "GPU: $(sensors|awk '/temp1/{ print $2 }')"
+exec = echo "GPU: $(sensors|awk '/hyst/{ print $2 }')"
 label-padding = 1
 format = <label>
 format-foreground = ${colors.foreground}

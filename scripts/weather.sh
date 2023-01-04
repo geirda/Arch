@@ -14,17 +14,18 @@ case "$CONDITIONS" in
 	partlycloudy_day)	IKON=" "	;;
 	partlycloudy_night)	IKON=" "	;;
 	cloudy)			IKON=" "	;;
+	fog)			IKON=" "	;;
 	lightrainshowers_day)	IKON=" "	;;
 	lightrainshowers_night)	IKON=" "	;;
-	heavyrain)		IKON=" "	;;
-	fog)			IKON=" "	;;
 	lightrain)		IKON=" "	;;
 	rain)			IKON=" "	;;
-	heavyrainandthunder)	IKON=" "	;;
+	heavyrain)		IKON=" "	;;
 	rainandthunder)		IKON=" "	;;
+	heavyrainandthunder)	IKON=" "	;;
+	sleet)			IKON=" "	;;
 	lightsnow)		IKON=" "	;;
 	snow)			IKON=" "	;;
-	sleet)			IKON=" "	;;
+	heavysnow)		IKON=" "	;;
 	06d.png)	IKON=" "	;;
 	06n.png)	IKON=" "	;;
 	07d.png)	IKON=" "	;;
@@ -68,7 +69,6 @@ case "$CONDITIONS" in
 	44n.png)	IKON=" "	;;
 	45d.png)	IKON=" "	;;
 	45n.png)	IKON=" "	;;
-	48.png)		IKON=" "	;;
 	50.png)		IKON=" "	;;
 esac
 

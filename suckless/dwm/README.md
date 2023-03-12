@@ -22,11 +22,7 @@ Patches included:
 This build of dwm uses the following two fonts:
 
 * extra/ttf-hack
-* aur/nerd-fonts-roboto-mono
-
-Please note that RobotoMono Nerd Font must be installed manually, e.g.:
-
-	$ yay -S nerd-fonts-roboto-mono
+* community/ttf-roboto-mono-nerd
 
 To get a layouts menu when rightclicking the layouts-icon, please install xmenu:
 
@@ -36,8 +32,8 @@ To get a layouts menu when rightclicking the layouts-icon, please install xmenu:
 
 ### From precompiled binary:
 
-	$ wget https://github.com/geirda/Arch/raw/master/suckless/dwm/dwm-geir-6.2-6-x86_64.pkg.tar.zst
-	$ sudo pacman -U dwm-geir-6.2-6-x86_64.pkg.tar.zst
+	$ wget https://github.com/geirda/Arch/raw/master/suckless/dwm/dwm-geir-6.2-7-x86_64.pkg.tar.zst
+	$ sudo pacman -U dwm-geir-6.2-7-x86_64.pkg.tar.zst
 
 ### From PKGBUILD:
 

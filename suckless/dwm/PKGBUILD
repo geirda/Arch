@@ -1,13 +1,12 @@
 # Maintainer: Geir Damstuen
 pkgname="dwm-geir"
 pkgver=6.2
-pkgrel=6
+pkgrel=7
 pkgdesc="A dynamic window manager for X"
 url="https://github.com/geirda/dwm-geir.git"
 arch=('i686' 'x86_64')
 license=('MIT')
-depends=('libx11' 'libxinerama' 'libxft' 'freetype2' 'ttf-hack')
-optdepends=(nerd-fonts-roboto-mono)
+depends=('libx11' 'libxinerama' 'libxft' 'freetype2' 'ttf-hack' 'ttf-roboto-mono-nerd')
 provides=(dwm)
 conflicts=(dwm)
 source=("git+$url")

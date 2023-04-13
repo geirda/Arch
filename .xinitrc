@@ -6,6 +6,8 @@ if [ -f "$userresources" ]; then
     xrdb -merge "$userresources"
 fi
 
+export GTK_THEME=vimix-dark-doder
+
 setxkbmap -layout no-hyper -option "compose:menu"
 numlockx
 xsetroot -cursor_name left_ptr

@@ -13,10 +13,10 @@ wget -q "https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=59.94097
 [ -s $STI/varsel.tmp ] && cp $STI/varsel.tmp $STI/varsel.json
 [ -s $STI/varsel2.tmp ] && cp $STI/varsel2.tmp $STI/varsel2.json
 
-VARSEL=$(cat $STI/varsel.json|cut -f90 -d\")
-VARSEL2=$(cat $STI/varsel2.json|cut -f90 -d\")
-TEMPERATUR=$(cat $STI/varsel.json|cut -f52 -d \:|cut -f1 -d\,)
-TEMPERATUR2=$(cat $STI/varsel2.json|cut -f52 -d \:|cut -f1 -d\,)
+VARSEL=$(cat $STI/varsel.json|cut -f92 -d\")
+VARSEL2=$(cat $STI/varsel2.json|cut -f92 -d\")
+TEMPERATUR=$(cat $STI/varsel.json|cut -f53 -d \:|cut -f1 -d\,)
+TEMPERATUR2=$(cat $STI/varsel2.json|cut -f53 -d \:|cut -f1 -d\,)
 
 echo $TEMPERATUR > $STI/data.txt
 echo $TEMPERATUR2 >> $STI/data.txt

@@ -107,13 +107,9 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 #esac
 
 # colors in less (default PAGER in Arch)
-export LESS_TERMCAP_mb=$'\E[01;31m'
-export LESS_TERMCAP_md=$'\E[01;31m'
-export LESS_TERMCAP_me=$'\E[0m'
-export LESS_TERMCAP_se=$'\E[0m'
-export LESS_TERMCAP_so=$'\E[01;44;33m'
-export LESS_TERMCAP_ue=$'\E[0m'
-export LESS_TERMCAP_us=$'\E[01;32m'
+export LESS='-R --use-color -Dd+r$Du+b$'
+export MANPAGER="less -R --use-color -Dd+r -Du+g"
+export MANROFFOPT="-P -c"
 
 # reload ~/.zshrc and compile to .zwc ...  ZDOTDIR see:
 # https://wiki.archlinux.org/index.php/zsh#Making_Zsh_your_default_shell
@@ -134,6 +130,7 @@ alias l='ls'
 alias la='ls -a'
 alias ll='ls -l'
 alias ls='exa --group-directories-first'
+alias lc='exa -r -s=changed'
 alias l.='exa -a | egrep "^\."'
 alias ..='cd ..'
 alias rm='rm -i'
